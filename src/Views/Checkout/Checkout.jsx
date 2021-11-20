@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Cart = () => {
+const Checkout = () => {
     return (
         <div>
-            <h4>Welcome to Cart</h4>
+            
         </div>
     )
 }
 
-export default Cart
+export default Checkout

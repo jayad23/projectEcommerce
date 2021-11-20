@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../Styles/RenderCard.css'
+import "./RenderCard.styles.css"
 
 const RenderCard = ({ idCard, name, imgs, description, price }) => {
     

@@ -23,7 +23,7 @@ const Header = () => {
     const handlerNavigate = ( loc ) =>{
         if ( loc === '/' ){
             navigate('/cart')
-        }else if ( loc === '/cart'){
+        }else{
             navigate('/')
         }
     }
@@ -43,10 +43,10 @@ const Header = () => {
             </div>
             <ul className={!icon ? "ulHidden" : "ulVisible"}>
                 <li>Home</li> 
-                <li>Contact</li>
-                <li>New Services</li>
                 <li>Products</li>
+                <li>New Services</li>
                 <li>Equipment</li>
+                <li>Contact</li>
             </ul>
         </>
     )

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import ProductsContext from '../Context/ProductsContext'
-import RenderCard from '../Components/RenderCard'
-import '../Styles/RenderCard.css'
+import ProductsContext from '../../Context/ProductsContext'
+import RenderCard from '../../Components/RenderCard/RenderCard'
+
 
 
 const Home = () => {
