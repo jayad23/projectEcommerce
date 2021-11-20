@@ -5,8 +5,16 @@ const StoreContext = createContext()
 const StoreContextProvider = ({children}) => {
 
 
+
+    
+
+    const data = {
+
+    }
+
+
     return (
-       <StoreContext.Provider>
+       <StoreContext.Provider value={data}>
            {children}
        </StoreContext.Provider>
     )
