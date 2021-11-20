@@ -6,12 +6,11 @@ const StoreContextProvider = ({children}) => {
 
 
 
-    
+
 
     const data = {
 
     }
-
 
     return (
        <StoreContext.Provider value={data}>
