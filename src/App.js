@@ -11,18 +11,21 @@ import Checkout from './Views/Checkout/Checkout';
 
 //layOut & Context Provider
 import MainLayOut from './Customs/MainLayOut/MainLayOut';
+import {StoreContextProvider} from "./Context/StoreContext"
 
 function App() {
   return (
     <BrowserRouter>
       <MainLayOut>
-        <Routes>
-          <Route path="/" exact element={<Home/>}/>
-          <Route path="/login" exact element={<Login />}/>
-          <Route path="/cart" exact element={<Cart/>}/>
-          <Route path="/checkout" exact element={<Checkout />}/>
-        </Routes>
-        </MainLayOut>
+        <StoreContextProvider>
+          <Routes>
+            <Route path="/" exact element={<Home/>}/>
+            <Route path="/login" exact element={<Login />}/>
+            <Route path="/cart" exact element={<Cart/>}/>
+            <Route path="/checkout" exact element={<Checkout />}/>
+          </Routes>
+        </StoreContextProvider>
+      </MainLayOut>
     </BrowserRouter>
   );
 }
