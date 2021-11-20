@@ -5,7 +5,8 @@
     height: 100%;
     background-color: #ffd1a9;
     align-items: center;
-    
+    -webkit-box-shadow: 0px 10px 13px -7px #b68c67, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #b68c67, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .header-container > button{
@@ -59,6 +60,7 @@ ul{
     font-size: 1.5rem;
     color: #57a7a8;
     padding: 1px;
+    
 }
 
 ul > li{
