@@ -20,13 +20,7 @@ const Header = () => {
         setIcon(!icon)
     }
 
-    const handlerNavigate = ( loc ) =>{
-        if ( loc === '/' ){
-            navigate('/cart')
-        }else{
-            navigate('/')
-        }
-    }
+
 
 
     return (
@@ -34,21 +28,19 @@ const Header = () => {
             <div className="header-container">
                 <button onClick={handlerIcon}><i class={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
                 <img src={BlackLogoTrimmed} alt="logo" />
-                <div onClick={()=>handlerNavigate(pathname)} className="cart-icon">
-                    {
-                        pathname === '/' ? <i class="fas fa-cart-arrow-down"></i> : <i class="fas fa-undo-alt"></i>
-                    }
-
-                    <h6>{pathname === '/' ? `${items} Obj.` : "Back to Home"}</h6>
+                <div className="cart-icon" onClick={()=> navigate ("/cart")}>
+                    
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <h6>{`${items}`}</h6>
                     
                 </div>
             </div>
             <ul className={!icon ? "ulHidden" : "ulVisible"}>
-                <li>Home</li> 
-                <li>Products</li>
-                <li>New Services</li>
-                <li>Equipment</li>
-                <li>Contact</li>
+                <li onClick={()=> navigate ("/")}>Home</li> 
+                <li onClick={()=> navigate ("/products")}>Products</li>
+                <li onClick={()=> navigate ()}>New Services</li>
+                <li onClick={()=> navigate ()}>Equipment</li>
+                <li onClick={()=> navigate ()}>Contact</li>
             </ul>
         </>
     )
