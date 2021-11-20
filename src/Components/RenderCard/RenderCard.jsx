@@ -48,10 +48,8 @@ const RenderCard = ({ idCard, name, imgs, description, price }) => {
             <div className='container-text'>
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <div className="price">
-                    <h3>{`$ ${price}`}</h3>
-                </div>
-                <button className="border border-black py-1 px-4 rounded-2xl text-black">Add to Cart</button>
+                <h3 className="price">{`$ ${price}`}</h3>
+                <button className=" py-1 px-4 rounded-2xl text-black">Add to Cart</button>
             </div>
         </div>
     )
