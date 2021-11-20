@@ -84,6 +84,7 @@ img {
 
 .container-text>p{
     font-size: .9rem;
+    /* height: 100px; */
 }
 .container-text>p::first-letter{
     font-weight: bold;
