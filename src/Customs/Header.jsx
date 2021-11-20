@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Logo from '../Assets/Logo.png'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 
 //Styles
 import './Header.css'
@@ -23,7 +23,7 @@ const Header = () => {
     const handlerNavigate = ( loc ) =>{
         if ( loc === '/' ){
             navigate('/cart')
-        }else if ( loc === '/cart'){
+        }else{
             navigate('/')
         }
     }
@@ -42,11 +42,11 @@ const Header = () => {
                 </div>
             </div>
             <ul className={!icon ? "ulHidden" : "ulVisible"}>
-                <li>Home</li> 
-                <li>Contact</li>
-                <li>New Services</li>
-                <li>Products</li>
-                <li>Equipment</li>
+                <Link to="/"><li>Home</li></Link> 
+                <Link to="/"><li>Products</li></Link> 
+                <Link to="/"><li>New Services</li></Link> 
+                <Link to="/"><li>Equipments</li></Link> 
+                <Link to="/"><li>Contact</li></Link> 
             </ul>
         </>
     )
