@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Logo from '../Assets/Logo.png'
+import LogoNegro from '../Assets/LogoNegro.png'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 //Styles
@@ -33,7 +33,7 @@ const Header = () => {
         <>
             <div className="header-container">
                 <button onClick={handlerIcon}><i class={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
-                <img src={Logo} alt="logo" />
+                <img src={LogoNegro} alt="logo" />
                 <div
                     onClick={()=>handlerNavigate(pathname)}
                     className="cart-icon">
