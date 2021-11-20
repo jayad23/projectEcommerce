@@ -34,11 +34,13 @@ const Header = () => {
             <div className="header-container">
                 <button onClick={handlerIcon}><i class={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
                 <img src={BlackLogoTrimmed} alt="logo" />
-                <div
-                    onClick={()=>handlerNavigate(pathname)}
-                    className="cart-icon">
-                    {pathname === '/' ? <i class="fas fa-cart-arrow-down"></i> : <i class="fas fa-undo-alt"></i>}
+                <div onClick={()=>handlerNavigate(pathname)} className="cart-icon">
+                    {
+                        pathname === '/' ? <i class="fas fa-cart-arrow-down"></i> : <i class="fas fa-undo-alt"></i>
+                    }
+
                     <h6>{pathname === '/' ? `${items} Obj.` : "Back to Home"}</h6>
+                    
                 </div>
             </div>
             <ul className={!icon ? "ulHidden" : "ulVisible"}>

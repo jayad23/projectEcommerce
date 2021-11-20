@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     return (
         <div>
+            <br />
             <h4>Welcome to Cart</h4>
-            <Link to="/checkout"><button>Go to Checkout</button></Link>
+            <br />
+            <Link to="/checkout"><button className="border border-black py-1 px-4 rounded-2xl bg-black text-white">Go to Checkout</button></Link>
         </div>
     )
 }

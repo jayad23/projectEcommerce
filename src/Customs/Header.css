@@ -60,6 +60,7 @@ ul{
     font-size: 1.5rem;
     color: #57a7a8;
     padding: 1px;
+    padding-bottom: 8px;
     
 }
 
@@ -76,6 +77,7 @@ ul > li{
 
 ul > li:hover{
     border-bottom: 2px solid #bd712e;
+    border-left: 2px solid #bb8c64;
     font-size: 1.6rem;
     font-weight: bolder;
     transition: 0.4s ease-in-out;
@@ -141,6 +143,7 @@ ul > li:hover{
     .ulVisible{
         margin-left: 0;
         transition: 1s ease-out;
+        padding-bottom: 10px;
     }
 
     ul > li{
