@@ -24,7 +24,7 @@ const ProductsContextProvider = ({children}) => {
             {   
                 id: 2,
                 name: 'Product 1',
-                descp: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae quis facilis libero.",
+                descp: "Lorem consectetur adipisicing elit. Recusandae quis facilis libero.",
                 price: 150,
                 img:{
                     img1,
@@ -36,7 +36,7 @@ const ProductsContextProvider = ({children}) => {
             {   
                 id: 3,
                 name: 'Product 1',
-                descp: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias culpa hic, pariatur dignissimos aperiam fugiat.",
+                descp: "Lorem ipsum   Molestias culpa hic, pariatur dignissimos aperiam fugiat.",
                 price: 150,
                 img:{
                     img1,
@@ -60,7 +60,7 @@ const ProductsContextProvider = ({children}) => {
             {   
                 id: 5,
                 name: 'Product 1',
-                descp: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iusto ipsam est placeat in minus quas.",
+                descp: "Lorem, ipsum dolor  Nesciunt iusto ipsam est placeat in minus quas.",
                 price: 150,
                 img:{
                     img1,

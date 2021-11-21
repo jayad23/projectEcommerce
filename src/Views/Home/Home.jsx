@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
+import Carrousell from '../../Components/Carrousel/Carrousell'
 
 const Home = () => {
 
   
     return (
         <div>
-            <h2>estoy en home</h2>
+            <Carrousell />
         </div>
     )
 }
