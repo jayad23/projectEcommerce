@@ -23,7 +23,7 @@ const Header = () => {
 
 
     return (
-        <>
+        <div className="contenedor-header">
             <div className="header-container">
                 <button onClick={handlerIcon}><i class={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
                 <img src={BlackLogoTrimmed} alt="logo" />
@@ -41,7 +41,7 @@ const Header = () => {
                 <li onClick={()=> navigate ("/login")}>Loguin / Logout</li>
                 <li onClick={()=> navigate ("/checkout")}>Checkout</li>
             </ul>
-        </>
+        </div>
     )
 }
 

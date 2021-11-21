@@ -7,7 +7,7 @@ const Products = () => {
     const { dataOne } = useContext(ProductsContext)
     
     return (
-        <div className="main-container">
+        <div className="main-container mt-20">
         {
             dataOne?.products?.map(product =>
                 <RenderCard

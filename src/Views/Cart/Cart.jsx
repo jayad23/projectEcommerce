@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
     return (
-        <div>
+        <div className="mt-10">
             <br />
             <h4>Welcome to Cart</h4>
             <br />

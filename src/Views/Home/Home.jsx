@@ -6,7 +6,7 @@ const Home = () => {
 
   
     return (
-        <div>
+        <div className="mt-20">
             <Carrousell />
         </div>
     )
