@@ -37,9 +37,9 @@ const Header = () => {
             <ul className={!icon ? "ulHidden" : "ulVisible"}>
                 <li onClick={()=> navigate ("/")}>Home</li> 
                 <li onClick={()=> navigate ("/products")}>Products</li>
-                <li onClick={()=> navigate ()}>New Services</li>
-                <li onClick={()=> navigate ()}>Equipment</li>
-                <li onClick={()=> navigate ()}>Contact</li>
+                <li onClick={()=> navigate ("/aboutus")}>About Us</li>
+                <li onClick={()=> navigate ("/login")}>Loguin / Logout</li>
+                <li onClick={()=> navigate ("/checkout")}>Checkout</li>
             </ul>
         </>
     )
