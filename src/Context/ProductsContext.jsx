@@ -24,7 +24,7 @@ const ProductsContextProvider = ({children}) => {
             {   
                 id: 2,
                 name: 'Product 1',
-                descp: "Lorem consectetur adipisicing elit. Recusandae quis facilis libero.",
+                descp: "Lorem consectetur adipisicing elit. Recusandae quis facilis libero.asaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaa",
                 price: 150,
                 img:{
                     img1,

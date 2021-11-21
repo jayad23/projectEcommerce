@@ -1,0 +1,70 @@
+.slider-home-container{
+    width: 90%;
+    height: 60vh;
+    margin: auto;
+    margin-top: 10px;
+    /* position: absolute; */
+    overflow: hidden;
+}
+
+.slider-home-container>.slides-home{
+    
+    width: 300%;
+    display: flex;
+
+}
+
+.slider-home-container>.slides-home>.slide{
+    width: 100%;
+    position: relative;
+}
+
+.slider-home-container>.slides-home>.slide>img{
+    position: absolute;
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    animation: imagen 20s infinite ease;
+}
+
+@keyframes imagen {
+
+    10%{
+        left: 0;
+    }
+    30%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    55%{
+        left: -200%;
+    }
+    80%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+    
+ 
+
+}
+
+
+
+.navigation-slide{
+    position: absolute;
+    bottom: 12%;
+    left: calc(50% - 20px);
+}
+
+.navigation-slide>button{
+    background-color: #57a7a8;
+    width: 20px;
+    height: 5px;
+    border: 3px solid 57a7a8;
+    margin-right: 10px;
+}
+

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Carrousell from '../../Components/Carrousel/Carrousell'
 
 const Home = () => {

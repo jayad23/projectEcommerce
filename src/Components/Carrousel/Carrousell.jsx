@@ -1,37 +1,36 @@
-import React from 'react';
-// import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
-import { Carousel } from 'antd';
+import React from 'react'
 import Logo from "../../Assets/Logo.jpg"
+import ColourLogo from "../../Assets/ColourLogo.png"
+import BlackLogoBig from "../../Assets/BlackLogoBig.png"
+
+// Styles
+import "./Carrousell.styles.css"
 
 const Carrousell = () => {
-
-    const contentStyle = {
-
-        height: '160px',
-        color: '#fff',
-        lineHeight: '160px',
-        textAlign: 'center',
-        background: '#364d79',
-    };
-
-
     return (
 
-        <Carousel autoplay>
-            <div>
-                 <img src={Logo} alt="" />
+
+        <div className="slider-home-container">
+
+            <div className="slides-home">
+                <div className="slide">
+                    <img src={Logo} alt="" />
+                </div>
+                <div className="slide">
+                    <img src={ColourLogo} alt="" />
+                </div>
+                <div className="slide">
+                    <img src={BlackLogoBig} alt="" />
+                </div>
             </div>
-            <div>
-               <h3>Funciona </h3>
+
+            <div className="navigation-slide">
+                <button></button>
+                <button></button>
+                <button></button>
             </div>
-            <div>
-             <img src={Logo} alt="" />
-            </div>
-            <div>
-             <img src={Logo} alt="" />
-            </div>
-        </Carousel>
+
+        </div>
 
     )
 }
