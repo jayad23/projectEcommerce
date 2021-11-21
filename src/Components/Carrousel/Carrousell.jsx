@@ -1,12 +1,17 @@
 import React from 'react'
-import Logo from "../../Assets/Logo.jpg"
-import ColourLogo from "../../Assets/ColourLogo.png"
-import BlackLogoBig from "../../Assets/BlackLogoBig.png"
+
+//Images
+import spa20 from "../../Assets/spa20.jpg"
+import imgdosmil from "../../Assets/imgdosmil.png"
+import spa2 from "../../Assets/spa2.jpg"
+
 
 // Styles
 import "./Carrousell.styles.css"
 
 const Carrousell = () => {
+
+
     return (
 
 
@@ -14,20 +19,14 @@ const Carrousell = () => {
 
             <div className="slides-home">
                 <div className="slide">
-                    <img src={Logo} alt="" />
+                    <img  src={imgdosmil} alt="" />
                 </div>
                 <div className="slide">
-                    <img src={ColourLogo} alt="" />
+                    <img src={spa20} alt="" />
                 </div>
                 <div className="slide">
-                    <img src={BlackLogoBig} alt="" />
+                    <img src={spa2} alt="" />
                 </div>
-            </div>
-
-            <div className="navigation-slide">
-                <button></button>
-                <button></button>
-                <button></button>
             </div>
 
         </div>
