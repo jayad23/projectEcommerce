@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import BlackLogoTrimmed from "../Assets/BalckLogoTrimmed.png"
 import { useNavigate, useLocation } from 'react-router-dom'
-
 //Styles
 import './Header.css'
 
