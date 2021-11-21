@@ -3,9 +3,7 @@
     height: 350px;
     margin: auto;
     margin-top: 20px;
-    /* position: absolute; */
     overflow: hidden;
-    border-radius: 5px;
 }
 
 .slider-home-container>.slides-home{
@@ -54,6 +52,12 @@
  
 
 }
+
+/* @media screen and (max-width: 550px){
+
+
+
+} */
 
 
 
