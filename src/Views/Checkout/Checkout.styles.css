@@ -1,0 +1,10 @@
+.contenedor-checkout{
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 685px) {
+
+    .contenedor-checkout{
+        margin-top: 0px;
+    }
+}

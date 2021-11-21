@@ -1,8 +1,9 @@
 import React from 'react'
+import "./AboutUs.styles.css"
 
 const AboutUs = () => {
     return (
-        <div className="mt-20">
+        <div className="contenedor-about">
             welcome to about us
         </div>
     )

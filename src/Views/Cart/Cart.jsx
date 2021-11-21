@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "./Cart.styles.css"
 
 const Cart = () => {
     return (
-        <div className="mt-10">
+        <div className="contenedor-cart">
             <br />
             <h4>Welcome to Cart</h4>
             <br />

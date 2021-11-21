@@ -2,12 +2,14 @@ import React, { useContext } from 'react'
 import ProductsContext from '../../Context/ProductsContext'
 import RenderCard from '../../Components/RenderCard/RenderCard'
 
+import "./Products.styles.css"
+
 const Products = () => {
 
     const { dataOne } = useContext(ProductsContext)
     
     return (
-        <div className="main-container mt-20">
+        <div className="main-container contenedor-prodcuts">
         {
             dataOne?.products?.map(product =>
                 <RenderCard

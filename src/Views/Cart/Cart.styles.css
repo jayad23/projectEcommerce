@@ -1,0 +1,10 @@
+.contenedor-cart{
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 685px) {
+
+    .contenedor-cart{
+        margin-top: 0px;
+    }
+}

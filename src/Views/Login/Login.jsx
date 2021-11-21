@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Login.styles.css"
 
 const Login = () => {
     return (
-        <div className="mt-20">
+        <div className="contenedor-login">
             <h2>Welcome to Login</h2>
         </div>
     )

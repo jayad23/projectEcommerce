@@ -1,0 +1,10 @@
+.contenedor-login{
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 685px) {
+
+    .contenedor-login{
+        margin-top: 0px;
+    }
+}
