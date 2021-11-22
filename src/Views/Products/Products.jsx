@@ -9,7 +9,7 @@ const Products = () => {
     const { dataOne } = useContext(ProductsContext)
     
     return (
-        <div className="main-container contenedor-prodcuts">
+        <div className="contenedor-prodcuts">
         {
             dataOne?.products?.map(product =>
                 <RenderCard

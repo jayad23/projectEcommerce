@@ -2,6 +2,18 @@
     margin-top: 70px;
 }
 
+.contenedor-map{
+    width: 80%;
+    margin: auto;
+}
+
+.contenedor-map>a>img{
+    width: 100%;
+    margin: auto;
+    height: 60vh;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 685px) {
 
     .contenedor-about{

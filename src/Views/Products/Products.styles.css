@@ -1,5 +1,8 @@
 .contenedor-prodcuts{
     margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 685px) {

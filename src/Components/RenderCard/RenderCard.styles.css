@@ -63,11 +63,7 @@
     border: none;
 }
 
-.main-container{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
+
 
 .container-text{
     height: 50%;
