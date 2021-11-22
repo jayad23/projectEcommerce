@@ -9,8 +9,7 @@ const reducer = ( state, action )=>{
 
     switch ( action.type ) {
         case "ADD_TO_CART":
-            console.log(action.payload.idCard)
-            console.log(state.amount)
+            
             return{
                 ...state,
                 cart:[ ...state.cart, state.amount.includes( action.payload.idCard) ? false : action.payload  ],

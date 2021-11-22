@@ -1,10 +1,14 @@
-.prodcutoss{
+.productoss{
     width: 100%;
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .products-cart{
     width: 30%;
+    border: 2px solid black;
+    margin-top: 10px;
 }
 
 .products-cart>img{

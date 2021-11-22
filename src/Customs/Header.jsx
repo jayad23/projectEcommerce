@@ -1,10 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import BlackLogoTrimmed from "../Assets/BalckLogoTrimmed.png"
 import { useNavigate, useLocation } from 'react-router-dom'
+
+import ProductsContext from '../Context/ProductsContext'
+
 //Styles
 import './Header.css'
 
 const Header = () => {
+
+    const {state} = useContext(ProductsContext)
+
+    const numCart = state.cart.length
+
     //States
     const [icon, setIcon] = useState(false)
     const [items, setItems] = useState(1)
@@ -30,7 +38,7 @@ const Header = () => {
                 <div className="cart-icon" onClick={()=> navigate ("/cart")}>
                     
                     <i class="fas fa-cart-arrow-down"></i>
-                    <h6>{`${items}`}</h6>
+                    <h6>{numCart}</h6>
                     
                 </div>
             </div>
