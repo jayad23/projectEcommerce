@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import "./RenderCard.styles.css"
 
-const RenderCard = ({ idCard, name, imgs, description, price }) => {
-    
+import ProductsContext from '../../Context/ProductsContext'
 
+const RenderCard = ({ idCard, name, imgs, description, price }) => {
+
+    const { dispatch } = useContext(ProductsContext)
+    
     const {img1, img2, img3} = imgs
 
     const [imageOne, setImageOne] = useState(true)
@@ -49,7 +52,7 @@ const RenderCard = ({ idCard, name, imgs, description, price }) => {
                 <h3>{name}</h3>
                 <p>{description}</p>
                 <h3 className="price">{`$ ${price}`}</h3>
-                <button className=" py-1 px-4 rounded-2xl text-black">Add to Cart</button>
+                <button onClick={()=> dispatch({type:"ADD_TO_CART", payload: { idCard, name, imgs, description, price } })} className=" py-1 px-4 rounded-2xl text-black" >Add to Cart</button>
             </div>
         </div>
     )

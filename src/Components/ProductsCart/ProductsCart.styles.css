@@ -1,0 +1,17 @@
+.prodcutoss{
+    width: 100%;
+    display: flex;
+}
+
+.products-cart{
+    width: 30%;
+}
+
+.products-cart>img{
+    width: 100px;
+    height: 100px;
+}
+
+.hidden{
+    display: none;
+}

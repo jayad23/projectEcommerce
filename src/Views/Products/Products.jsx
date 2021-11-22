@@ -6,12 +6,13 @@ import "./Products.styles.css"
 
 const Products = () => {
 
-    const { dataOne } = useContext(ProductsContext)
+    const { state } = useContext(ProductsContext)
     
     return (
         <div className="contenedor-prodcuts">
         {
-            dataOne?.products?.map(product =>
+            state?.products?.map(product =>
+                
                 <RenderCard
                     key={product.id}
                     idCard={product.id}
