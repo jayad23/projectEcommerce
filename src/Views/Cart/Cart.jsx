@@ -12,10 +12,9 @@ const Cart = () => {
 
     return (
         <div className="contenedor-cart">
-           
-           <ProductsCart />
 
-            {/* <Link to="/checkout"><button className="border border-black py-1 px-4 rounded-2xl bg-black text-white">Go to Checkout</button></Link> */}
+           <ProductsCart />
+           
         </div>
     )
 }
