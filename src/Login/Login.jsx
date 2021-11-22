@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 
 //Login
 import GoogleLogin from 'react-google-login';
+//img Login
+import UserLogin from "../Assets/undraw_login_re_4vu2.svg"
 
 //Firebase
 import firebaseApp from './credenciales'
@@ -31,20 +33,19 @@ const Login = () => {
     return (
 
 
-        <div class="flex h-screen bg-gray-200 items-center justify-center  mt-32 mb-32">
+        <div class="flex h-screen bg-gray-200 items-center justify-center">
 
            <form onSubmit={submitHandler} class="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2" 
            action="">
             <div class="flex justify-center py-4">
-              <div class="flex bg-purple-200 rounded-full md:p-4 p-2 border-2 border-purple-300">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              <div class="flex bg-gray-100 rounded-full md:p-4 border-2 border-gray-300">
+                <img src={UserLogin} alt="User Login" className="w-20 h-20" />
               </div>
             </div>
 
             <div class="flex justify-center">
               <div class="flex">
-                <h1 class="text-gray-600 font-bold md:text-2xl text-xl">Formulario Registro</h1>
-                <h1 class="text-gray-600 font-bold md:text-2xl text-xl" > {resgistrandome? "Registrate" : "Inicia Sesión"} </h1>
+                <h2 class="text-gray-600 font-bold md:text-2xl text-xl" > {resgistrandome? "Registrate" : "Inicia Sesión"} </h2>
               </div>
             </div>
 
@@ -72,17 +73,17 @@ const Login = () => {
 
         
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-              <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "Registrate" : "Iniciar Sesión" } </button>
+              <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? " Registrate" : " Iniciar Sesión" } </button>
               <div className="flex justify-center aling-center my-auto">
                 <GoogleLogin
                     clientId="989520578565-sbdrbdj5brv88su0nl8s7stb72vid81b.apps.googleusercontent.com"
-                    buttonText="Login"
+                    buttonText="Login with Google"
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
+                    cookiePolicy={'single_host_origin'}  
                 />
             </div>  
-              <button onClick={()=> setResgistrandome (!resgistrandome)}   class='w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "Ya tienes cuenta? Inicia Sesión": "No tienes cuenta? Registrate" } </button>
+              <button onClick={()=> setResgistrandome (!resgistrandome)}   class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" } </button>
             </div>
             
 
