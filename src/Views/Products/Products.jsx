@@ -20,6 +20,7 @@ const Products = () => {
                     imgs={product.img}
                     description={product.descp}
                     price={product.price}
+                    subname={product?.subname}
                 />
             )
         }

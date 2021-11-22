@@ -3,8 +3,15 @@ import "./RenderCard.styles.css"
 
 import ProductsContext from '../../Context/ProductsContext'
 
-const RenderCard = ({ idCard, name, imgs, description, price }) => {
-
+const RenderCard = ({ idCard, name, imgs, description, price, subname }) => {
+    const [seeMore, setSeeMore] = useState(70)
+    const handlerDescription = ()=>{
+        if(seeMore === 70){
+            setSeeMore(description.length)
+        }else if(seeMore === description.length){
+            setSeeMore(70)
+        }
+    }
     const { dispatch } = useContext(ProductsContext)
     
     const {img1, img2, img3} = imgs
@@ -49,8 +56,10 @@ const RenderCard = ({ idCard, name, imgs, description, price }) => {
                 </div>
             </div>
             <div className='container-text'>
-                <h3>{name}</h3>
-                <p>{description}</p>
+                <h3>{seeMore === 70 ? name : ''}</h3>
+                <h6>{seeMore === 70 ? subname : ''}</h6>
+                <p>{description.slice(0, seeMore)}</p>
+                <p onClick={handlerDescription} className="seemore">{seeMore === 70 ? 'Ver más' : 'Ver Menos'}</p>
                 <h3 className="price">{`$ ${price}`}</h3>
                 <button onClick={()=> dispatch({type:"ADD_TO_CART", payload: { idCard, name, imgs, description, price } })} className=" py-1 px-4 rounded-2xl text-black" >Add to Cart</button>
             </div>
