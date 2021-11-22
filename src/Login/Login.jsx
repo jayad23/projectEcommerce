@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
 
+//Login
+import GoogleLogin from 'react-google-login';
+
+//Firebase
 import firebaseApp from './credenciales'
 import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} from "firebase/auth"
 const auth = getAuth(firebaseApp)
@@ -19,6 +23,10 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password);
     }
 
+    //Login Google API
+    const responseGoogle =  (response) => (
+      console.log(response)
+      )
 
     return (
 
@@ -65,9 +73,18 @@ const Login = () => {
         
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
               <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "Registrate" : "Iniciar Sesión" } </button>
-              <button class='w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Registrate con Google</button>
+              <div className="flex justify-center aling-center my-auto">
+                <GoogleLogin
+                    clientId="989520578565-sbdrbdj5brv88su0nl8s7stb72vid81b.apps.googleusercontent.com"
+                    buttonText="Login"
+                    onSuccess={responseGoogle}
+                    onFailure={responseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
+            </div>  
               <button onClick={()=> setResgistrandome (!resgistrandome)}   class='w-auto bg-purple-500 hover:bg-purple-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "Ya tienes cuenta? Inicia Sesión": "No tienes cuenta? Registrate" } </button>
             </div>
+            
 
            </form>
 

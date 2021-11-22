@@ -21,12 +21,12 @@ function App() {
     <BrowserRouter>
       <MainLayOut>
         <Routes>
-          <Route path="/" exact element={<Home/>}/>
-          <Route path="/cart" exact element={<Cart/>}/>
-          <Route path="/formulario" exact element={<Formulario/>}/>
-          <Route path="/login" exact element={<Login/>}/>
+            <Route path="/" exact element={<Home/>}/>
+            <Route path="/cart" exact element={<Cart/>}/>  
+            <Route path="/formulario" element={<Formulario/>}/>
+            <Route path="/login"element={<Login/>}/>
         </Routes>
-        </MainLayOut>
+      </MainLayOut>
     </BrowserRouter>
   );
 }
