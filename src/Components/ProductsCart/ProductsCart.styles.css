@@ -1,21 +1,38 @@
+
+
 .productoss{
-    width: 100%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    flex-direction: column;
+    /* background-color: green; */
+    align-items: center;
+    margin: auto;
+    padding: 10px 5px;
 }
 
 .products-cart{
-    width: 30%;
+    width: 50%;
     border: 2px solid black;
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
 }
 
 .products-cart>img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 .hidden{
     display: none;
+}
+
+.facturacion{
+    width: 100%;
+    text-align: center;
 }
