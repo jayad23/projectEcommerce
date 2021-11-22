@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 
-import Formulario from '../Login/Formulario';
 import Login from '../Login/Login';
 
 //Firebase

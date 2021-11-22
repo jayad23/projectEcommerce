@@ -75,15 +75,19 @@ const Login = () => {
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
               <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? " Registrate" : " Iniciar Sesión" } </button>
               <div className="flex justify-center aling-center my-auto">
-                <GoogleLogin
+                {resgistrandome===false? (<GoogleLogin
                     clientId="989520578565-sbdrbdj5brv88su0nl8s7stb72vid81b.apps.googleusercontent.com"
-                    buttonText="Login with Google"
+                    buttonText="Ingresa con Google"
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
                     cookiePolicy={'single_host_origin'}  
-                />
+                />) : null }
+                
             </div>  
-              <button onClick={()=> setResgistrandome (!resgistrandome)}   class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" } </button>
+              <button onClick={()=> setResgistrandome (!resgistrandome)}
+               class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>
+               { resgistrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" }
+              </button>
             </div>
             
 
