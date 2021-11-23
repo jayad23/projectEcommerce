@@ -24,7 +24,22 @@ const reducer = ( state, action )=>{
                 cart: state.cart.filter( ( x )=> x.idCard !== action.payload.idCard ),
                 priceTotal: state.priceTotal - action.payload.price,
                 amount: state.amount.filter( ( y ) => y !== action.payload.idCard )
-             }       
+            }
+        case "REMOVE_ONE_PRODUCT":
+            console.log(action.payload)
+            return{
+                ...state,
+                priceTotal: state.priceTotal - action.payload.price,
+                ...state.amount.splice((state.amount.indexOf(action.payload.idCard)), 1) // [1,1,1,2,2,3,3,3]
+            }
+            
+        
+        case "ADD_ONE_PRODUCT":
+            return{
+                ...state,
+                priceTotal: state.priceTotal + action.payload.price,
+                amount:[ ...state.amount, action.payload.idCard ]
+            }
             
         default:
             return state
@@ -165,7 +180,7 @@ const ProductsContextProvider = ({children}) => {
         ],
         cart: [],
         priceTotal: 0,
-        amount:[]
+        amount:[],
     }
 
     
