@@ -17,9 +17,15 @@ import Tonic3 from '../Imgs/Tonic3.png'
 import Drenaje1 from '../Imgs/Drenaje1.jpg'
 import Drenaje2 from '../Imgs/Drenaje2.png'
 import Drenaje3 from '../Imgs/Drenaje3.png'
-import DeepCl1 from '../Imgs/DeepCl1.png'
-import DeepCl2 from '../Imgs/DeepCl2.jpg'
-import DeepCl3 from '../Imgs/DeepCl3.jpg'
+import Relaxing1 from '../Imgs/Relaxing1.png'
+import Relaxing2 from '../Imgs/Relaxing2.jpg'
+import Relaxing3 from '../Imgs/Relaxing3.jpg'
+import Sporty1 from '../Imgs/Sporty1.png'
+import Sporty2 from '../Imgs/sporty2.jpg'
+import Sporty3 from '../Imgs/Sporty3.jpg'
+import Deconst1 from '../Imgs/Deconst1.png'
+import Deconst2 from '../Imgs/Deconst2.jpg'
+import Deconst3 from '../Imgs/Deconst3.jpg'
 
 const ProductsContext = createContext()
 
@@ -148,38 +154,40 @@ const ProductsContextProvider = ({children}) => {
 
             {   
                 id: 7,
-                name: 'Escleroterapia',
-                subname: 'Complemento',
-                descp: "Este servicio se ofrece por aparte, o en un paquete junto con nuestro Drenaje Linfático. ¡Mejora tu calidad de vida!",
+                name: 'Masaje',
+                subname: 'Relajacion',
+                descp: "Terapia manual que neutraliza las energías  y aumenta las vibraciones positivas a través de maniobras suaves y específicas.",
                 price: 50000,
                 img:{
-                    img1: Amatista1,
-                    img2: Amatista2,
-                    img3: Amatista3
+                    img1: Relaxing1,
+                    img2: Relaxing2,
+                    img3: Relaxing3
                 }
             },
 
             {   
                 id: 8,
-                name: 'Radiofreciencia',
-                descp: "Estimula el tejido conectivo para lograr una piel revitalizada y radiante. Esta técnica favorece la regeneración celular y estimula la producción natural de colágeno y elastina.",
+                name: 'Masaje',
+                subname: 'Deportivo',
+                descp: "Activa la circulación sanguínea y de la linfa, eliminando toxinas. Relaja y ayuda a dormir bien, descansando profundamente.",
                 price: 150000,
                 img:{
-                    img1: Amatista1,
-                    img2: Amatista2,
-                    img3: Amatista3
+                    img1: Sporty1,
+                    img2: Sporty2,
+                    img3: Sporty3
                 }
             },
 
             {   
                 id: 9,
-                name: 'Ultrasonido',
-                descp: "Los ultrasonidos se utilizan como tratamiento facial para estimular la producción de colágeno y tensar la piel eliminando la flacidez.",
+                name: 'Descontracturante',
+                subname: 'Muscular',
+                descp: "Disuelve las contracturas que se producen por el estrés, las malas posturas, la falta de descanso o una vida demasiado sedentaria.",
                 price: 150000,
                 img:{
-                    img1: Amatista1,
-                    img2: Amatista2,
-                    img3: Amatista3
+                    img1: Deconst1,
+                    img2: Deconst2,
+                    img3: Deconst3
                 }
             },
 
