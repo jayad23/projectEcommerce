@@ -11,7 +11,7 @@ import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword} f
 const auth = getAuth(firebaseApp)
 
 const Login = () => {
-    const [resgistrandome, setResgistrandome] = useState(false)
+    const [registrandome, setRegistrandome] = useState(false)
 
     async function submitHandler(e){
         e.preventDefault()
@@ -35,9 +35,9 @@ const Login = () => {
 
         <div class="flex h-screen bg-gray-200 items-center justify-center">
 
-           <form onSubmit={submitHandler} class="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2" 
+           <form onSubmit={submitHandler} class="grid bg-white rounded-lg shadow-xl w-11/12 md:w-9/12 lg:w-1/2 h-3/4" 
            action="">
-            <div class="flex justify-center py-4">
+            <div class="flex justify-center my-4 mx-auto h-24 w-24">
               <div class="flex bg-gray-100 rounded-full md:p-4 border-2 border-gray-300">
                 <img src={UserLogin} alt="User Login" className="w-20 h-20" />
               </div>
@@ -45,16 +45,16 @@ const Login = () => {
 
             <div class="flex justify-center">
               <div class="flex">
-                <h2 class="text-gray-600 font-bold md:text-2xl text-xl" > {resgistrandome? "Registrate" : "Inicia Sesión"} </h2>
+                <h2 class="text-gray-600 font-bold md:text-2xl text-xl" > {registrandome? "Registrate" : "Inicia Sesión"} </h2>
               </div>
             </div>
-
-            <input  class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  grid grid-cols-1 mt-5 mx-7"
+            {registrandome === true ? (<input  class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  grid grid-cols-1 mt-5 mx-7"
                 type="text" 
                 name="usuario"             
                 placeholder="Escribe tu Usuario"   
                 required
-                />
+                />) : null}
+            
         
             <input  class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent  grid grid-cols-1 mt-5 mx-7"
                 type="email" 
@@ -73,9 +73,9 @@ const Login = () => {
 
         
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
-              <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { resgistrandome? " Registrate" : " Iniciar Sesión" } </button>
+              <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { registrandome? " Registrate" : " Iniciar Sesión" } </button>
               <div className="flex justify-center aling-center my-auto">
-                {resgistrandome===false? (<GoogleLogin
+                {registrandome===false? (<GoogleLogin
                     clientId="989520578565-sbdrbdj5brv88su0nl8s7stb72vid81b.apps.googleusercontent.com"
                     buttonText="Ingresa con Google"
                     onSuccess={responseGoogle}
@@ -84,9 +84,9 @@ const Login = () => {
                 />) : null }
                 
             </div>  
-              <button onClick={()=> setResgistrandome (!resgistrandome)}
+              <button onClick={()=> setRegistrandome (!registrandome)}
                class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>
-               { resgistrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" }
+               { registrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" }
               </button>
             </div>
             

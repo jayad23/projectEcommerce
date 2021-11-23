@@ -19,14 +19,14 @@ function App() {
   return (
     
     <BrowserRouter>
-      <MainLayOut>
         <Routes>
+          <Route element={<MainLayOut />}>
             <Route path="/" exact element={<Home/>}/>
             <Route path="/cart" exact element={<Cart/>}/>  
+          </Route>
             <Route path="/login"element={<Login/>}/>
             <Route path="/*" element={<NotFound />} />
         </Routes>
-      </MainLayOut>
     </BrowserRouter>
   );
 }
