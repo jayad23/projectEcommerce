@@ -1,7 +1,7 @@
 .container-slider{
     -webkit-box-shadow: 3px -2px 10px 5px #918e8e; 
     box-shadow: 3px -2px 10px 5px #BABABA;
-    width: 250px;
+    width: 280px;
     height: 450px;
     margin: 2rem;
     position: relative;
@@ -46,8 +46,8 @@
 
 .navigation-container{
     position: absolute;
-    top: 11rem;
-    left: 5.3rem;
+    top: 12.5rem;
+    left: 40%;
 }
 
 .navigation-container > button{
