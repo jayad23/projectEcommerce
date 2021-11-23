@@ -1,20 +1,20 @@
 import React, { createContext, useReducer } from 'react'
-import Amatista1 from '../Imgs/Amatista1.png'
+import Amatista1 from '../Imgs/Amatista1.jpg'
 import Amatista2 from '../Imgs/Amatista2.png'
 import Amatista3 from '../Imgs/Amatista3.png'
 import Cristal1 from '../Imgs/Cristal1.png'
 import Cristal2 from '../Imgs/Cristal2.png'
-import Cristal3 from '../Imgs/Cristal3.png'
-import QuarzoRosa1 from '../Imgs/QuarzoRosa1.png'
+import Cristal3 from '../Imgs/Cristal3.jpg'
+import QuarzoRosa1 from '../Imgs/QuarzoRosa1.jpg'
 import QuarzoRosa2 from '../Imgs/QuarzoRosa2.png'
 import QuarzoRosa3 from '../Imgs/QuarzoRosa3.png'
-import Hydrafacial1 from '../Imgs/Hydrafacial1.png'
+import Hydrafacial1 from '../Imgs/Hydrafacial1.jpg'
 import Hydrafacial2 from '../Imgs/Hydrafacial2.png'
 import Hydrafacial3 from '../Imgs/Hydrafacial3.png'
-import Tonic1 from '../Imgs/Tonic1.png'
+import Tonic1 from '../Imgs/Tonic1.jpg'
 import Tonic2 from '../Imgs/Tonic2.png'
 import Tonic3 from '../Imgs/Tonic3.png'
-import Drenaje1 from '../Imgs/Drenaje1.png'
+import Drenaje1 from '../Imgs/Drenaje1.jpg'
 import Drenaje2 from '../Imgs/Drenaje2.png'
 import Drenaje3 from '../Imgs/Drenaje3.png'
 
@@ -73,9 +73,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Elimina y remueve las impurezas y células muertas. Esto retrasa el envejecimiento, y la aparición de arrugas, la piel se vuelve más luminosa, suave y tersa.",
                 price: 150000,
                 img:{
-                    img1: QuarzoRosa2,
+                    img1: QuarzoRosa1,
                     img2: QuarzoRosa3,
-                    img3: QuarzoRosa1
+                    img3: QuarzoRosa2
                 }
             },
 
@@ -150,9 +150,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Peeling ultrasónico, Nutrición facial, Masaje facial + vibración cuarzo cristal, mascarilla de alta hidratación.",
                 price: 130000,
                 img:{
-                    img1: Cristal1,
+                    img1: Cristal3,
                     img2: Cristal2,
-                    img3: Cristal3
+                    img3: Cristal1
                 }
             },
 
