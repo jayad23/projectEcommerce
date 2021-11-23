@@ -1,7 +1,22 @@
 import React, { createContext, useReducer } from 'react'
-import img1 from '../Imgs/img1.jpg'
-import img2 from '../Imgs/img2.jpg'
-import img3 from '../Imgs/img3.jpg'
+import Amatista1 from '../Imgs/Amatista1.png'
+import Amatista2 from '../Imgs/Amatista2.png'
+import Amatista3 from '../Imgs/Amatista3.png'
+import Cristal1 from '../Imgs/Cristal1.png'
+import Cristal2 from '../Imgs/Cristal2.png'
+import Cristal3 from '../Imgs/Cristal3.png'
+import QuarzoRosa1 from '../Imgs/QuarzoRosa1.png'
+import QuarzoRosa2 from '../Imgs/QuarzoRosa2.png'
+import QuarzoRosa3 from '../Imgs/QuarzoRosa3.png'
+import Hydrafacial1 from '../Imgs/Hydrafacial1.png'
+import Hydrafacial2 from '../Imgs/Hydrafacial2.png'
+import Hydrafacial3 from '../Imgs/Hydrafacial3.png'
+import Tonic1 from '../Imgs/Tonic1.png'
+import Tonic2 from '../Imgs/Tonic2.png'
+import Tonic3 from '../Imgs/Tonic3.png'
+import Drenaje1 from '../Imgs/Drenaje1.png'
+import Drenaje2 from '../Imgs/Drenaje2.png'
+import Drenaje3 from '../Imgs/Drenaje3.png'
 
 const ProductsContext = createContext()
 
@@ -58,9 +73,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Elimina y remueve las impurezas y células muertas. Esto retrasa el envejecimiento, y la aparición de arrugas, la piel se vuelve más luminosa, suave y tersa.",
                 price: 150000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: QuarzoRosa2,
+                    img2: QuarzoRosa3,
+                    img3: QuarzoRosa1
                 }
             },
 
@@ -71,9 +86,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Hydrafacial Es el más reciente avance en rejuvenecimiento de la piel. Es un procedimiento único que combina limpieza, exfoliación, extracción, hidratación y protección antioxidante.",
                 price: 140000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Hydrafacial1,
+                    img2: Hydrafacial2,
+                    img3: Hydrafacial3
                 }
             },
 
@@ -83,9 +98,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Combina en una misma sesión limpieza, extracción de impurezas, peeling, e infiltración de sueros para obtener una piel de aspecto fresco, saludable, radiante y brillante.",
                 price: 180000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Tonic1,
+                    img2: Tonic2,
+                    img3: Tonic3
                 }
             },
 
@@ -96,9 +111,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Con este servicio, estarías combatiendo lesiones musculares, hinchazón, retención de líquido intersticial, y celulitis entre muchas otras cosas más. ",
                 price: 70000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Drenaje1,
+                    img2: Drenaje2,
+                    img3: Drenaje3
                 }
             },
 
@@ -109,9 +124,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Este servicio se ofrece por aparte, o en un paquete junto con nuestro Drenaje Linfático. ¡Mejora tu calidad de vida!",
                 price: 50000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Amatista1,
+                    img2: Amatista2,
+                    img3: Amatista3
                 }
             },
 
@@ -122,9 +137,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Experimenta el poder del cuarzo amatista para lograr una limpieza más profunda, extrayendo impurezas y regulando el flujo de oxígeno por tu piel.",
                 price: 150000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Amatista1,
+                    img2: Amatista2,
+                    img3: Amatista3
                 }
             },
 
@@ -135,9 +150,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Peeling ultrasónico, Nutrición facial, Masaje facial + vibración cuarzo cristal, mascarilla de alta hidratación.",
                 price: 130000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Cristal1,
+                    img2: Cristal2,
+                    img3: Cristal3
                 }
             },
 
@@ -147,9 +162,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Estimula el tejido conectivo para lograr una piel revitalizada y radiante. Esta técnica favorece la regeneración celular y estimula la producción natural de colágeno y elastina.",
                 price: 150000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Amatista1,
+                    img2: Amatista2,
+                    img3: Amatista3
                 }
             },
 
@@ -159,9 +174,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Los ultrasonidos se utilizan como tratamiento facial para estimular la producción de colágeno y tensar la piel eliminando la flacidez.",
                 price: 150000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Amatista1,
+                    img2: Amatista2,
+                    img3: Amatista3
                 }
             },
 
@@ -171,9 +186,9 @@ const ProductsContextProvider = ({children}) => {
                 descp: "Una de las técnicas más revolucionarias para mantener la piel suave, limpia y joven. Elimina las cicatrices y las manchas de la edad.",
                 price: 150000,
                 img:{
-                    img1,
-                    img2,
-                    img3
+                    img1: Amatista1,
+                    img2: Amatista2,
+                    img3: Amatista3
                 }
             }
 
