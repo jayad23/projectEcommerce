@@ -8,6 +8,7 @@ import angel from "../../Assets/angel.jpg"
 import emmanuel from "../../Assets/emmanuel.jpg"
 import roberto from "../../Assets/roberto.jpg"
 import jhon from "../../Assets/jhon.jpg"
+import sergio from "../../Assets/sergio.jpg"
 
 
 const Developers = () => {
@@ -58,7 +59,7 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>jhon</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/Fernand20555402" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -66,7 +67,7 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>emmanuel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/Fernand20555402" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -74,7 +75,7 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>roberto</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/Fernand20555402" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -82,7 +83,15 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>uriel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/Fernand20555402" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                </div>
+            </div>
+            <div className="tarjeta tarjeta1">
+                <img src={sergio} alt="" />
+                <div className="titulos-tarjeta">
+                    <h2>uriel</h2>
+                    <h3>Full Stack Developer</h3>
+                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
                 </div>
             </div>
        </div>
