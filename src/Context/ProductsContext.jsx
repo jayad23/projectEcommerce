@@ -38,7 +38,7 @@ const reducer = ( state, action )=>{
 
             return isProduct ? { 
                 ...state,
-                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount ++} : x ) ,            
+                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount + 1} : x ) ,            
                 priceTotal: state.priceTotal + action.payload.price,
                
             } : {
@@ -53,7 +53,7 @@ const reducer = ( state, action )=>{
 
              return isDelete ? {
                 ...state,
-                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount --} : x ),
+                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount - 1} : x ),
                 priceTotal: state.priceTotal - action.payload.price,
 
             } : {

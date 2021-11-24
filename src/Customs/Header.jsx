@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="cart-icon" onClick={()=> navigate ("/cart")}>
                     
                     <i class="fas fa-cart-arrow-down"></i>
-                    <h6>{state.cart.length}</h6>
+                    <h6>{state.cart.length > 0 ? state?.cart?.map( a => a.amount).reduce( (a,b)=> a+b) : 0}</h6> 
                     
                 </div>
             </div>
