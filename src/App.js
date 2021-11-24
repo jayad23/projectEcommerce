@@ -9,6 +9,7 @@ import Cart from './Views/Cart/Cart';
 import Login from './Views/Login/Login';
 import Checkout from './Views/Checkout/Checkout';
 import AboutUs from './Views/AboutUs/AboutUs';
+import Developers from './Views/Developers/Developers';
 
 
 //layOut & Context Provider
@@ -28,6 +29,7 @@ function App() {
             <Route path="/checkout"  element={ <Checkout /> }/>
             <Route path="/login"  element={ <Login /> }/>
             <Route path="/aboutus"  element={ <AboutUs /> }/>
+            <Route path="/developers" element={ <Developers />}/>
           </Routes>
           </MainLayOut>
       </ProductsContextProvider>
