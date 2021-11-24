@@ -53,16 +53,16 @@ const reducer = ( state, action )=>{
             console.log(action.payload)
             return{
                 ...state,
-                priceTotal: state.priceTotal - action.payload.price,
-                ...state.amount.splice((state.amount.indexOf(action.payload.idCard)), 1) // [1,1,1,2,2,3,3,3]
+                count: [action.payload.idCard ? state.count -1 : state.count],
+                priceTotal: action.payload.price * state.count // [1,1,1,2,2,3,3,3]
             }
             
         
         case "ADD_ONE_PRODUCT":
             return{
                 ...state,
-                priceTotal: state.priceTotal + action.payload.price,
-                amount:[ ...state.amount, action.payload.idCard ]
+                count: [state.count],
+                priceTotal:[!state.count <= 1 ? action.payload.price * state.count: state.priceTotal]
             }
             
         default:
@@ -205,6 +205,7 @@ const ProductsContextProvider = ({children}) => {
 
         ],
         cart: [],
+        count: 1,
         priceTotal: 0,
         amount:[],
     }
