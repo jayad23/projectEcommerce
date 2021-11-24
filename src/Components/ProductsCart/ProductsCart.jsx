@@ -9,7 +9,7 @@ const ProductsCart = ( ) => {
 
     const { state, dispatch } = useContext(ProductsContext)
 
-   
+   console.log(state.priceTotal)
 
     return (
         
