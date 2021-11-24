@@ -1,34 +1,19 @@
 import React, {useState} from 'react'
 
-import Login from '../Login/Login';
 
-//Firebase
-// import firebaseApp from './Login/credenciales';
-// import { getAuth, onAuthStateChanged } from "firebase/auth";
-// const auth = getAuth(firebaseApp);
+import firebaseApp from "../firebase/credenciales";
+import { getAuth, signOut } from "firebase/auth";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+
+const auth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
 
 const Home = () => {
 
-    
-    // const [userGlobal, setUserGlobal] = useState(null)
-
-    // onAuthStateChanged(auth, (userFirebase) =>{
-    //   if (userFirebase) {
-    //     //en caso de que haya inicio de sesion
-    //     setUserGlobal(userFirebase);
-        
-    //   }else{
-    //       // En caso de no haya sesión iniciada
-    //       setUserGlobal(null);
-    //   }
-    // })
-    // console.log(userGlobal);
-
-
-
     return (
         <>
-            {/* {userGlobal? <Formulario/> : <Login/>} */}
+            <h2>Holi Home</h2>
+            <button onClick={() => signOut(auth)}>Cerrar sesión</button>
         </>
     )
 }
