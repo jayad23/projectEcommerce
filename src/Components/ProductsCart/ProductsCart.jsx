@@ -22,7 +22,7 @@ const ProductsCart = ( ) => {
                             <img src={ x !== false && x.imgs["img1"]} alt="" />                      
                             <h2>{x.name}</h2>
                             <h2>{`$ ${x.price}`}</h2>
-                            <h3>{state.cart.length}</h3>
+                            <h2>{ `Cantidad: ${x.amount}` }</h2>
                             <button onClick={()=> dispatch ({type:"REMOVE_ONE", payload:  x })}>quitar</button>
                             <button onClick={()=> dispatch ({type:"ADD_TO_CART", payload: x })}>agregar</button>
                             <button onClick={()=> dispatch({type:"REMOVE_FROM_CART", payload: x  })} className=" bg-red-500 text-white py-1 px-3 rounded-xl">{x !== false && "delete"}</button>
