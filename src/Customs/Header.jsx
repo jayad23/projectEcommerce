@@ -13,25 +13,6 @@ const Header = () => {
     
 
 
-    let numCart = state.amount.sort()
-    let countCart = 1
-    let arrayCart = []
-    let arrayRepet = []
-
-    for (let i = 0; i < numCart.length; i++) {
-
-        if( numCart[i+1] === numCart[i] ){
-
-            countCart++
-
-        }else{
-            arrayCart.push( numCart[i] )
-            arrayRepet.push( countCart )
-            countCart = 1
-        }
-        
-    }
-
 
     //States
     const [icon, setIcon] = useState(false)
@@ -58,7 +39,7 @@ const Header = () => {
                 <div className="cart-icon" onClick={()=> navigate ("/cart")}>
                     
                     <i class="fas fa-cart-arrow-down"></i>
-                    <h6>{arrayCart.length}</h6>
+                    <h6>{state.cart.length}</h6>
                     
                 </div>
             </div>

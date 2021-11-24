@@ -9,25 +9,7 @@ const ProductsCart = ( ) => {
 
     const { state, dispatch } = useContext(ProductsContext)
 
-    let numCart = state.amount.sort()   // [1,1,1,1, 2,2,3,3,3,4,4,4]
-    let countCart = 1
-    let arrayCart = []                  // [ 3, 5, 8]
-    let arrayRepet = []                //[5, 2, 3]
-
-    for (let i = 0; i < numCart.length; i++) {
-
-        if( numCart[i+1] === numCart[i] ){
-
-            countCart++
-
-        }else{
-            arrayCart.push( numCart[i] )
-            arrayRepet.push( countCart )
-            countCart = 1
-        }
-        
-    }
-
+   
 
     return (
         
@@ -40,9 +22,9 @@ const ProductsCart = ( ) => {
                             <img src={ x !== false && x.imgs["img1"]} alt="" />                      
                             <h2>{x.name}</h2>
                             <h2>{`$ ${x.price}`}</h2>
-                            <h2>{ `Cantidad: ${arrayRepet[arrayCart.indexOf(x.idCard)]}` }</h2>
-                            <button onClick={()=> dispatch ({type:"REMOVE_ONE_PRODUCT", payload:  x })}>quitar</button>
-                            <button onClick={()=> dispatch ({type:"ADD_ONE_PRODUCT", payload: x })}>agregar</button>
+                            <h3>{state.cart.length}</h3>
+                            <button onClick={()=> dispatch ({type:"REMOVE_ONE", payload:  x })}>quitar</button>
+                            <button onClick={()=> dispatch ({type:"ADD_TO_CART", payload: x })}>agregar</button>
                             <button onClick={()=> dispatch({type:"REMOVE_FROM_CART", payload: x  })} className=" bg-red-500 text-white py-1 px-3 rounded-xl">{x !== false && "delete"}</button>
                         </div>
 

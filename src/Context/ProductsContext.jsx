@@ -33,36 +33,44 @@ const reducer = ( state, action )=>{
 
     switch ( action.type ) {
         case "ADD_TO_CART":
-            
-            return{
+
+            let isProduct = state.cart.find( x => x.idCard === action.payload.idCard)
+
+            return isProduct ? { 
                 ...state,
-                cart:[ ...state.cart, state.amount.includes( action.payload.idCard) ? false : action.payload  ],
+                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount ++} : x ) ,            
                 priceTotal: state.priceTotal + action.payload.price,
-                amount:[ ...state.amount.sort(), action.payload.idCard ]
+               
+            } : {
+                ...state,
+                cart:[ ...state.cart, {...action.payload, amount: 1}],
+                priceTotal: state.priceTotal + action.payload.price,
             }
-         case "REMOVE_FROM_CART":
-             console.log(action.payload)
-             return{
+
+         case "REMOVE_ONE":
+
+            let isDelete = state.cart.find( x => x.idCard === action.payload.idCard & x.amount > 1)
+
+             return isDelete ? {
+                ...state,
+                cart: state.cart.map( x => x.idCard === action.payload.idCard ? {...x, amount: x.amount --} : x ),
+                priceTotal: state.priceTotal - action.payload.price,
+
+            } : {
+
+               ...state
+               
+
+            }
+        
+        case "REMOVE_FROM_CART":
+
+            return{
 
                 ...state,
-                cart: state.cart.filter( ( x )=> x.idCard !== action.payload.idCard ),
-                priceTotal: state.priceTotal - action.payload.price,
-                amount: state.amount.filter( ( y ) => y !== action.payload.idCard )
-            }
-        case "REMOVE_ONE_PRODUCT":
-            console.log(action.payload)
-            return{
-                ...state,
-                priceTotal: state.priceTotal - action.payload.price,
-                ...state.amount.splice((state.amount.indexOf(action.payload.idCard)), 1) // [1,1,1,2,2,3,3,3]
-            }
-            
-        
-        case "ADD_ONE_PRODUCT":
-            return{
-                ...state,
-                priceTotal: state.priceTotal + action.payload.price,
-                amount:[ ...state.amount, action.payload.idCard ]
+                cart: state.cart.filter( x => x.idCard !== action.payload.idCard),
+                priceTotal: state.priceTotal - action.payload.price
+
             }
             
         default:
@@ -206,7 +214,6 @@ const ProductsContextProvider = ({children}) => {
         ],
         cart: [],
         priceTotal: 0,
-        amount:[],
     }
 
     
