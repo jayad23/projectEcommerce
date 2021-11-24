@@ -86,7 +86,7 @@ const Developers = () => {
                     <a href="#"><i className="fab fa-twitter twitter"></i></a>
                 </div>
             </div>
-            <div className="tarjeta tarjeta1">
+            <div className="tarjeta tarjeta2">
                 <img src={sergio} alt="" />
                 <div className="titulos-tarjeta">
                     <h2>uriel</h2>
