@@ -19,7 +19,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>Jayder</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/KkVngz23" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -27,7 +31,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>Jorge</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="https://github.com/jorgeduje"  target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#"><i className="fab fa-twitter twitter"  target="_blank"></i></a>
+                        <a href="https://www.linkedin.com/in/jorge-duje-2212b4219/"  target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -35,7 +43,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>Fernando</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="https://twitter.com/Fernand20555402" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -43,7 +55,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>Joseph</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#" ><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#"  target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#"  target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#"  target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -51,7 +67,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>angel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="https://github.com/AngelVargas369" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/angelv-dwfs/" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -59,7 +79,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>jhon</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -67,7 +91,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>emmanuel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -75,7 +103,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>roberto</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
             <div className="tarjeta tarjeta1">
@@ -83,7 +115,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>uriel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>    
                 </div>
             </div>
             <div className="tarjeta tarjeta2">
@@ -91,7 +127,11 @@ const Developers = () => {
                 <div className="titulos-tarjeta">
                     <h2>uriel</h2>
                     <h3>Full Stack Developer</h3>
-                    <a href="#"><i className="fab fa-twitter twitter"></i></a>
+                    <div className="contenedor-icons">
+                        <a href="#" target="_blank"><i className="fab fa-github twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-twitter twitter"></i></a>
+                        <a href="#" target="_blank"><i className="fab fa-linkedin-in twitter"></i></a>
+                    </div>
                 </div>
             </div>
        </div>
