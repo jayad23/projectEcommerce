@@ -20,7 +20,7 @@ const ProductsCart = ( ) => {
                         
                         <div key={x.idCard} className={x !== false ? "products-cart" : "hidden"}>
                             <img src={ x !== false && x.imgs["img1"]} alt="" />                      
-                            <h2>{x.name}</h2>
+                            <h2 className="product-name">{x.name}</h2>
                             <h2>{`$ ${x.price}`}</h2>
                             <h2>{ `Cantidad: ${x.amount}` }</h2>
                             <button onClick={()=> dispatch ({type:"REMOVE_ONE", payload:  x })}>quitar</button>
@@ -31,10 +31,11 @@ const ProductsCart = ( ) => {
                     )
                 }
                         <div className="facturacion">
-                            <h2>Datos de facturacion para el cliente</h2>
-                            <h3>Cantidad de productos 20</h3>
-                            <h4>impuestos 10</h4>
-                            <h4>Precio total 500</h4>
+                            <h2>Datos de facturacion</h2>
+                           <div className="datos">
+                            <h3>{`Cantidad Productos: ${state.cart.length}`}</h3>
+                            <h4>{`Precio Total: ${state.priceTotal}`}</h4>
+                           </div>
                            <Link to="/checkout"> <button className="py-1 px-3 bg-green-600 text-white rounded-xl">Ir a Checkout</button></Link>
                         </div>
             </div>

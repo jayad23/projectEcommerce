@@ -1,7 +1,7 @@
 
 
 .productoss{
-    width: 40%;
+    width: 60%;
     border: 2px solid black;
     border-radius: 10px;
     display: flex;
@@ -11,12 +11,13 @@
     align-items: center;
     margin: auto;
     padding: 10px 5px;
+    background-color: black;
 }
 
 .products-cart{
     width: 100%;
-    background-color: steelblue;
-    margin-top: 10px;
+    background-color: pink;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +28,11 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.products-cart>.product-name{
+    width: 30%;
+    text-align: center;
 }
 
 .hidden{
@@ -43,4 +49,12 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+.datos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-left: 10px;
 }
