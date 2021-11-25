@@ -1,38 +1,22 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState } from "react";
+import Payment from "../../Components/Payment/Payment";
 
-export default function Paypal() {
-  const paypal = useRef();
-
-  useEffect(() => {
-    window.paypal.Buttons({
-        createOrder: (data, actions, err) => {
-          return actions.order.create({
-            intent: "CAPTURE",
-            purchase_units: [
-              {
-                description: "Cool looking table",
-                amount: {
-                  currency_code: "ARG",
-                  value: 150.00,
-                },
-              },
-            ],
-          });
-        },
-        onApprove: async (data, actions) => {
-          const order = await actions.order.capture();
-          console.log(order);
-        },
-        onError: (err) => {
-          console.log(err);
-        },
-      })
-      .render(paypal.current);
-  }, []);
+function Checkout() {
+  const [checkout, setCheckOut] = useState(false);
 
   return (
-    <div>
-      <div ref={paypal}></div>
+    <div className="Checkout">
+      {checkout ? (
+        <Payment />
+      ) : (
+          <button
+            onClick={() => { setCheckOut(true) }}
+          >
+            P A G A R
+          </button>
+          )}
     </div>
   );
 }
+
+export default Checkout;

@@ -1,0 +1,26 @@
+.Checkout{
+    height: 90vh;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2rem;
+    padding-bottom: 5px;
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;
+    background-image: url(https://img.grouponcdn.com/iam/NG2PuHCH332Ax1sL19w4GDDyvyE/NG-1500x900/v1/c870x524.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Checkout > button{
+    margin-top: 20rem;
+    background-color: rgb(7, 139, 7);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    align-items: center;
+}
+
+.Checkout > button:hover{
+    background-color: rgb(169, 250, 46);
+    color: #000;
+}
