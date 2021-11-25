@@ -1,7 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
 import './Payment.css'
+import ProductContext from "../../Context/ProductsContext"
 
 export default function Payment() {
+
+  const {state} = useContext(ProductContext)
+  const {priceTotal} = state
   const paypal = useRef();
   
   useEffect(() => {
@@ -14,7 +18,7 @@ export default function Payment() {
                 description: "Cool looking table",
                 amount: {
                   currency_code: "USD",
-                  value: 150.00,
+                  value: priceTotal,
                 },
               },
             ],

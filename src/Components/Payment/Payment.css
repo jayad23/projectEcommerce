@@ -24,3 +24,14 @@
     background-color: rgb(169, 250, 46);
     color: #000;
 }
+
+.paypal-container{
+    border: 2px solid black;
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 12%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
