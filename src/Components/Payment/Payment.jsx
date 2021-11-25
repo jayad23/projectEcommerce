@@ -1,12 +1,9 @@
-import React, { useRef, useEffect, useContext } from "react";
-import ProductsContext from '../../Context/ProductsContext'
+import React, { useRef, useEffect } from "react";
 import './Payment.css'
 
 export default function Payment() {
   const paypal = useRef();
-  const {state} = useContext(ProductsContext)
-  const value = state?.priceTotal
-    console.log(value)
+  
   useEffect(() => {
     window.paypal.Buttons({
         createOrder: (data, actions, err) => {
@@ -17,7 +14,7 @@ export default function Payment() {
                 description: "Cool looking table",
                 amount: {
                   currency_code: "USD",
-                  value: {value},
+                  value: 150.00,
                 },
               },
             ],

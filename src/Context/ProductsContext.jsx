@@ -68,7 +68,7 @@ const reducer = ( state, action )=>{
 
                 ...state,
                 cart: state.cart.filter( x => x.idCard !== action.payload.idCard),
-                priceTotal: state.priceTotal - action.payload.price
+                priceTotal: state.priceTotal - action.payload.price * action.payload.amount
 
             }
             
