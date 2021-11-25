@@ -14,6 +14,9 @@ import {
 //img Login
 import UserLogin from "../Assets/undraw_login_re_4vu2.svg"
 
+//logo Google
+import LogoGoogle from "../Assets/google_icon-icons.com_62736.svg"
+
 //Firebase config
 const auth = getAuth(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
@@ -26,8 +29,8 @@ const Logueo = () => {
   //Auth Firebase
   async function submitHandler(e) {
     e.preventDefault();
-    const correo = e.target.formBasicEmail.value;
-    const contra = e.target.formBasicPassword.value;
+    const correo = e.target.email.value;
+    const contra = e.target.password.value;
 
     if (registrandome) {
       //si se registra
@@ -70,11 +73,12 @@ const Logueo = () => {
                 placeholder="Escribe tu Email"   
                 required
                 />
-            <div class="grid grid-cols-1 mt-5 mx-7">
+            <div class="grid grid-cols-1 mt-5 mx-7 ">
               <input class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" 
               type="password"
               name="password" 
-              placeholder="Password" />
+              placeholder="Password"
+               />
             </div>
             <div class='flex items-center justify-center  md:gap-8 gap-4 pt-5 pb-5'>
               <button  class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'> { registrandome? " Registrate" : " Iniciar Sesión" } </button> 
@@ -82,13 +86,12 @@ const Logueo = () => {
                class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>
                { registrandome? "¿Ya tienes cuenta? Inicia Sesión": "¿No tienes cuenta? Registrate" }
               </button>
+              
               <button
-                variant="primary"
+                className="flex shadow-xl py-1 px-4 rounded-3xl font-bold text-gray-700 justify-between w-24 "
                 type="submit"
-                style={{ width: "300px" }}
                 onClick={() => signInWithRedirect(auth, googleProvider)}
-                >
-                Acceder con Google
+                ><img src={LogoGoogle} className="w-6 h-6"/> Login
                 </button>
             </div>
            </form>

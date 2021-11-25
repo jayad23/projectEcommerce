@@ -11,10 +11,9 @@ import Logueo from './firebase/Logueo';
 
 //layOut & Context Provider
 import MainLayOut from './Customs/MainLayOut/MainLayOut';
-import Login from './Login/Login';
 
 
-import firebaseApp from "./Login/credenciales";
+import firebaseApp from "./firebase/credenciales";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 const auth = getAuth(firebaseApp);
 function App() {
@@ -39,7 +38,6 @@ function App() {
             <Route path="/" exact element={<Home/>}/>
             <Route path="/cart" exact element={<Cart/>}/>  
           </Route>
-            <Route path="/login"element={<Login/>}/>
             <Route path="/*" element={<NotFound />} />
             <Route path="/logueo" element={usuarioGlobal ? (
               <Home correoUsuario={usuarioGlobal.email} />
