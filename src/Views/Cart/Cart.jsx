@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+
 import "./Cart.styles.css"
+
 
 import ProductsContext from '../../Context/ProductsContext'
 import ProductsCart from '../../Components/ProductsCart/ProductsCart'
@@ -14,6 +15,7 @@ const Cart = () => {
         <div className="contenedor-cart">
 
            <ProductsCart />
+
            
         </div>
     )
