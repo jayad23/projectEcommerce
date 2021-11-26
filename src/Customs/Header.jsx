@@ -48,7 +48,7 @@ const Header = () => {
                 <li onClick={()=> navigate ("/products")}>Products</li>
                 <li onClick={()=> navigate ("/aboutus")}>About Us</li>
                 <li onClick={()=> navigate ("/login")}>Loguin / Logout</li>
-                <li onClick={()=> navigate ("/checkout")}>Checkout</li>
+                <li onClick={()=> navigate ("/reviews")}>Testimonios</li>
             </ul>
         </div>
     )

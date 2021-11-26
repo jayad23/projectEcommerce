@@ -27,6 +27,7 @@ import Deconst1 from '../Imgs/Deconst1.png'
 import Deconst2 from '../Imgs/Deconst2.jpg'
 import Deconst3 from '../Imgs/Deconst3.jpg'
 
+import { ReviewData } from './ReviewsData/ReviewsData'
 const ProductsContext = createContext()
 
 const reducer = ( state, action )=>{
@@ -71,7 +72,12 @@ const reducer = ( state, action )=>{
                 priceTotal: state.priceTotal - action.payload.price * action.payload.amount
 
             }
-            
+        
+        case "ADD_REVIEW":
+            return{
+                ...state,
+                newComment: action.payload
+            } 
         default:
             return state
     }
@@ -213,6 +219,8 @@ const ProductsContextProvider = ({children}) => {
         ],
         cart: [],
         priceTotal: 0,
+        ReviewData,
+        newComment:{},
     }
 
     

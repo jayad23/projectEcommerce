@@ -1,0 +1,49 @@
+.comments-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.459)), url(https://cdn2.rsvponline.mx/files/rsvp/images/main/2021/cuarzo_morado_amatista.jpg);
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+}
+
+.comments-container > input{
+    border: none;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    
+}
+
+.comments-container > textarea{
+    border: none;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    
+}
+
+.button-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+}
+
+.button-form > button{
+    border: none;
+    width: 30%;
+    text-align: center;
+    border-radius: 0.7rem;
+    background-color:#df998d;
+    color: #f0e0e0;
+    
+}
+
+.button-form > button > i{
+    margin-right: 2rem;
+    font-size: 1.7rem;
+}
