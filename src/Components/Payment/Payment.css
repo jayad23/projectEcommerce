@@ -1,4 +1,4 @@
-.Checkout{
+/* .Checkout{
     height: 90vh;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2rem;
@@ -10,10 +10,26 @@
     background-image: url(https://img.grouponcdn.com/iam/NG2PuHCH332Ax1sL19w4GDDyvyE/NG-1500x900/v1/c870x524.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+} */
+
+.Checkout{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -70px;
+}
+
+.Checkout2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    width: 50%;
+    background-color: black;
 }
 
 .Checkout > button{
-    margin-top: 20rem;
+   
     background-color: rgb(7, 139, 7);
     padding: 1rem;
     border-radius: 0.6rem;
@@ -29,9 +45,8 @@
     border: 2px solid black;
     position: absolute;
     width: 50%;
-    margin-left: 25%;
-    margin-top: 12%;
     background-color: white;
-    padding: 5px;
+    padding: 15px 5px;
     border-radius: 10px;
+ 
 }

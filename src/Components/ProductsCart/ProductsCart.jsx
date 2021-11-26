@@ -42,7 +42,7 @@ const ProductsCart = ( ) => {
                             }</h3>
                             <h4>{`Precio Total: ${state.priceTotal}`}</h4>
                            </div>
-                           <Link to="/checkout"> <button className="py-1 px-3 bg-green-600 text-white rounded-xl">Ir a Checkout</button></Link>
+                          
                         </div>
             </div>
     )
