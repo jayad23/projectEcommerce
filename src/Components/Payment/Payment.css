@@ -30,15 +30,15 @@
 
 .Checkout > button{
    
-    background-color: rgb(7, 139, 7);
-    padding: 1rem;
+    background-color: #409194;
+    padding: .5rem 1rem;
     border-radius: 0.6rem;
     align-items: center;
+    color: white;
 }
 
 .Checkout > button:hover{
-    background-color: rgb(169, 250, 46);
-    color: #000;
+    background-color: #38bec0;
 }
 
 .paypal-container{

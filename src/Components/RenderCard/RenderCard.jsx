@@ -54,7 +54,7 @@ const RenderCard = ({ idCard, name, imgs, description, price, subname }) => {
             <div className='container-text'>
                 <h3>{seeDesc ? name : ''}</h3>
                 <h6>{seeDesc ? subname : ''}</h6>
-                <p>{seeDesc ? '' : description}</p>
+                <p className="description">{seeDesc ? '' : description}</p>
                 <p onClick={handlerDescription} className="seeMore">{seeDesc ? 'Ver Info' : 'Volver'}</p>
                 <h3 className="price">{seeDesc ? `$ ${price}` : ''}</h3>
                 <button onClick={()=> dispatch({type:"ADD_TO_CART", payload: { idCard, name, imgs, description, price } })} className=" py-1 px-4 rounded-2xl text-black" >Add to Cart</button>
