@@ -40,7 +40,7 @@ const ProductsCart = ( ) => {
                                `Productos Totales: ${ state.cart.length > 0 ? state?.cart?.map( a => a.amount).reduce( (a,b)=> a+b) : 0}`
   
                             }</h3>
-                            <h4>{`Precio Total: ${state.priceTotal}`}</h4>
+                            <h4>{`Precio Total: $ ${state.priceTotal}`}</h4>
                            </div>
                           
                         </div>
