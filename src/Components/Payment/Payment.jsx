@@ -33,7 +33,7 @@ export default function Payment() {
       })
       .render(paypal.current);
   }, []);
-
+  
   return (
     <div>
       <div className='paypal-container' ref={paypal}></div>
