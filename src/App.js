@@ -9,7 +9,7 @@ import Cart from './Views/Cart/Cart';
 import Login from './Views/Login/Login';
 import AboutUs from './Views/AboutUs/AboutUs';
 import Developers from './Views/Developers/Developers';
-import Testimonials from './Views/Testimonials/Testimonials'
+import Review from './Views/Reviews/Review';
 
 
 //layOut & Context Provider
@@ -28,8 +28,8 @@ function App() {
             <Route path="/products"  element={ <Products /> }/>
             <Route path="/login"  element={ <Login /> }/>
             <Route path="/aboutus"  element={ <AboutUs /> }/>
-            <Route path="/testimonials" element={ <Testimonials/> }/>
             <Route path="/developers" element={ <Developers />}/>
+            <Route path="/reviews" element={<Review/>}/>
           </Routes>
           </MainLayOut>
       </ProductsContextProvider>
