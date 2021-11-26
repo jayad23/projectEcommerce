@@ -16,16 +16,14 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: -70px;
+    margin-top: 10px;
 }
 
 .Checkout2{
     display: flex;
     justify-content: center;
-    width: 100%;
     margin-top: 20px;
-    width: 50%;
-    background-color: black;
+    width: 100%;
 }
 
 .Checkout > button{
@@ -43,10 +41,14 @@
 
 .paypal-container{
     border: 2px solid black;
-    position: absolute;
-    width: 50%;
-    background-color: white;
+    width: 100%;
     padding: 15px 5px;
     border-radius: 10px;
+    background-color: pink;
+    
  
+}
+
+@media screen and (max-width: 700px) {
+   
 }

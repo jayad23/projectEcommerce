@@ -75,3 +75,24 @@
       transform: rotate(180deg);
     }
   }
+
+  
+@media screen and (max-width: 700px) {
+    .productoss{
+        width: 90%;
+    }
+
+    .products-cart{
+        width: 50%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid white;
+        
+    }
+
+    .products-cart>.product-name{
+        width: 100%;
+        text-align: center;
+    }
+}
