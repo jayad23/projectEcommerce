@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState, useEffect } from 'react'
 
 import "./ProductsCart.styles.css"
 import ProductsContext from '../../Context/ProductsContext'
@@ -7,7 +6,16 @@ import ProductsContext from '../../Context/ProductsContext'
 
 const ProductsCart = ( ) => {
 
+    const [text, setText] = useState('')
+
     const { state, dispatch } = useContext(ProductsContext)
+
+    useEffect(() => {
+        setText(state.cart.map(item => item.name));
+    }, [ state ])
+    const textString = text.toString()
+    const order = `${textString}, Total:$ ${state.priceTotal}`;
+    const message = `https://api.whatsapp.com/send?phone=573016368707&text=${order}`
 
     return (
         
@@ -40,7 +48,7 @@ const ProductsCart = ( ) => {
                             }</h3>
                             <h4>{`Precio Total: $ ${state.priceTotal}`}</h4>
                            </div>
-                          
+                            <a href={message} target='_blank'>Haga Su pedido por WhatsApp</a>
                         </div>
             </div>
     )
