@@ -66,6 +66,12 @@
     animation: spin .5s ease-in;
 }
 
+.img-whats{
+    width: 100px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
 @keyframes spin {
     0% {
       transform: rotate(0deg);

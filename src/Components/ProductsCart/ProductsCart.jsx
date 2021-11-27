@@ -3,6 +3,8 @@ import React, { useContext, useState, useEffect } from 'react'
 import "./ProductsCart.styles.css"
 import ProductsContext from '../../Context/ProductsContext'
 
+import whatsapp from "../../Assets/whatsapp.png"
+
 
 const ProductsCart = ( ) => {
 
@@ -48,9 +50,11 @@ const ProductsCart = ( ) => {
                             }</h3>
                             <h4>{`Precio Total: $ ${state.priceTotal}`}</h4>
                            </div>
-                            <a href={message} target='_blank'>Haga Su pedido por WhatsApp</a>
+                           <h3 className="mb-2">Hace tu pedido por whatsapp</h3>
+                            <a href={message} target='_blank'><img src={whatsapp} alt=""  className="img-whats"/></a>
                         </div>
             </div>
+
     )
 }
 
