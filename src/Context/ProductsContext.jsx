@@ -74,9 +74,11 @@ const reducer = ( state, action )=>{
             }
         
         case "ADD_REVIEW":
+            console.log( action.payload )
             return{
                 ...state,
-                newComment: action.payload
+                cart: [...state.cart],
+                newComment: [...state.newComment, action.payload]
             } 
         default:
             return state
@@ -220,7 +222,7 @@ const ProductsContextProvider = ({children}) => {
         cart: [],
         priceTotal: 0,
         ReviewData,
-        newComment:{},
+        newComment:[],
     }
 
     
