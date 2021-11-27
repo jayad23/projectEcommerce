@@ -24,15 +24,17 @@ const Review = () => {
             
             }
             {
-                newComment &&
+                newComment?.map(user =>
                     <Reviews
-                        key = {state.newComment.id}
-                        userName = {state.newComment.name}
-                        prof = {state.newComment.profession}
-                        date = {state.newComment.date}
-                        rev = {state.newComment.review}
-                        avatar = {state.newComment.UserModal}
+                        key = {user.id}
+                        userName = {user.name}
+                        prof = {user.profession}
+                        date = {user.date}
+                        rev = {user.review}
+                        avatar = {user.UserModal}
                     />
+
+                )
             }
             <CommentForm/>
         </div>
