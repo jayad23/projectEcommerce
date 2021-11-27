@@ -61,7 +61,6 @@ const reducer = ( state, action )=>{
 
                ...state
                
-
             }
         
         case "REMOVE_FROM_CART":
@@ -74,12 +73,20 @@ const reducer = ( state, action )=>{
             }
         
         case "ADD_REVIEW":
-            console.log( action.payload )
+            
             return{
                 ...state,
                 cart: [...state.cart],
                 newComment: [...state.newComment, action.payload]
+            }
+            
+        case "LOG_IN":
+
+            return{
+                ...state,
+                loggedUser: action.payload
             } 
+
         default:
             return state
     }
@@ -223,6 +230,7 @@ const ProductsContextProvider = ({children}) => {
         priceTotal: 0,
         ReviewData,
         newComment:[],
+        loggedUser: null 
     }
 
     
