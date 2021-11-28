@@ -10,6 +10,7 @@ import Login from './Views/Login/Login';
 import AboutUs from './Views/AboutUs/AboutUs';
 import Developers from './Views/Developers/Developers';
 import Review from './Views/Reviews/Review';
+import Register from './Views/Register/Register';
 
 
 //layOut & Context Provider
@@ -30,6 +31,7 @@ function App() {
             <Route path="/aboutus"  element={ <AboutUs /> }/>
             <Route path="/developers" element={ <Developers />}/>
             <Route path="/reviews" element={<Review/>}/>
+            <Route path="/register" element={<Register/>}/>
           </Routes>
           </MainLayOut>
       </ProductsContextProvider>

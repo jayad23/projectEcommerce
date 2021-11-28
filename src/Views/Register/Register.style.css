@@ -1,0 +1,26 @@
+.container-register{
+    margin-top: 6rem;
+    
+}
+.sign-up{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-up > input{
+    margin: 0.5rem;
+    width: 40%;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    background-color: gray;
+}
+
+.sign-up > button{
+    background-color: yellowgreen;
+    padding: 0.6rem;
+    border-radius: 0.4rem;
+    margin-top: 0.7rem;
+}

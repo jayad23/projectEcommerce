@@ -80,8 +80,15 @@ const reducer = ( state, action )=>{
                 newComment: [...state.newComment, action.payload]
             }
             
-        case "LOG_IN":
+        case "LOG_IN_GMAIL":
 
+            return{
+                ...state,
+                loggedUser: action.payload
+            } 
+        
+        case "REGISTER":
+    
             return{
                 ...state,
                 loggedUser: action.payload
@@ -230,10 +237,9 @@ const ProductsContextProvider = ({children}) => {
         priceTotal: 0,
         ReviewData,
         newComment:[],
-        loggedUser: null 
+        loggedUser: null
     }
 
-    
     const [state, dispatch] = useReducer( reducer, inicialState )
 
 

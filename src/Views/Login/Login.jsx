@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { firebase, googleProvider} from '../..//Firebase/Firebase.config'
 import "./Login.styles.css"
 import ProductsContext from '../../Context/ProductsContext'
@@ -6,37 +7,58 @@ import ProductsContext from '../../Context/ProductsContext'
 const Login = () => {
 
     const { state, dispatch } = useContext(ProductsContext)
-    const [ logged, setLogged ] = useState(false)
-    const handleLogin = async (e)=> {
+
+    const handleLoginGmail = async (e)=> {
         e.preventDefault()
         try {
             const { user } = await firebase.auth().signInWithPopup(googleProvider)
             console.log(user)
             const { displayName, photoURL, uid} = user
             const infoLogIn = { displayName, photoURL, uid }
-            dispatch({type:'LOG_IN', payload: infoLogIn})
-            setLogged(!logged)
+            dispatch({type:'LOG_IN_GMAIL', payload: infoLogIn})
 
         } catch (error) {
             console.log(error)
         }
     }
 
-    const handleLogOut = async (e)=> {
+
+    const handleLogOutGmail = (e)=>{
         e.preventDefault()
-        const logOut = await firebase.auth().signOut(googleProvider)
-        console.log(logOut)
+        console.log('Logged Out')
     }
     
-    console.log(state.loggedUser)
 
     return (
         <div className="contenedor-login">
-            <form onSubmit={ logged ? (e)=>handleLogOut(e) : (e)=> handleLogin(e) }>
-                <input type="email" placeholder='E-Mail'/>
-                <input type="password" placeholder='Password'/>
-                <button type='submit'>{logged ? "Salir" : "Ingresar" }<i className="fab fa-google mx-2"></i></button>
-            </form>
+            {
+                state.loggedUser ? 
+                    <h1>Bienvenido {state.loggedUser.displayName}</h1>
+                :
+                <>
+                    <form className="log-in">
+                        <input type="email" placeholder='E-Mail'/>
+                        <input type="password" placeholder='Password'/>
+                        <button>Ingresar</button> 
+                    </form>
+                    <form 
+                        onSubmit={ (e)=> handleLoginGmail(e) } 
+                        className="container-gmail">
+                        <button type='submit'>Ingresa  con <i className="fab fa-google mx-2"></i></button>
+                    </form>
+                    <Link to="/register">¿Aun no tienes cuenta?</Link>
+                </>
+            }
+            {
+                state.loggedUser ?
+                <form 
+                    onSubmit={ (e)=>handleLogOutGmail(e)} 
+                    className="container-gmail">
+                    <button type='submit'>S A L I R <i className="fas fa-sign-out-alt"></i></button>
+                </form>
+                :
+                null
+            }
         </div>
     )
 }
