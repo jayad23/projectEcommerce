@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 
@@ -18,6 +19,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30%;
+
 
 }
 
@@ -25,31 +28,70 @@
     -webkit-box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.32); 
     box-shadow: 0px 1px 15px 3px rgba(0,0,0,0.32);
     margin: 0.5rem;
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    color: #409194;
 
+}
+
+.log-in > input::placeholder{
+    color: #409194;
+    border: none;
+    outline: none;
+    padding-left: 7px;
+}
+.log-in > input:focus{
+    color: #409194;
+    outline: none;
+}
+
+.log-in>button{
+    border: 1px solid #409194;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #409194;
+    width: 300px;
+    font-style: 1rem;
+}
+
+.log-in>button:hover{
+    color: #409194;
+    background-color: #fff;
 }
 
 .container-gmail{
     text-align: center;
     margin-top: 1rem;
-    width: 22%;
-
 }
 
 .container-gmail > button{
-    background-color: #F4B400;
-    width: 100%;
+    background-color: #409194;
+    width: 300px;
     color:#fff;
-    padding: 0.8rem;
-    border-radius: 2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
+    font-style: 1rem;
+}
+.container-gmail > button:hover{
+    background-color: #fff;
+    color: #409194;
+    border: 1px solid #409194;
 }
 
 .container-gmail > button > i{
-    color: #4285F4;
+    color: #fff;
     font-weight: bolder;
     font-size: larger;
+    padding-top: 3px;
 
+}
+.container-gmail > button > i:hover{
+    color: #409194;
 }
 
 .container-gmail > button > .fa-sign-out-alt{
@@ -61,9 +103,17 @@
 .contenedor-login > a{
     margin-top: 1rem;
     font-style: italic;
-    background-color: rgb(218, 212, 212);
-    padding: 0.4rem;
-    border-radius: 0.5rem;
-    border-bottom: 2px solid gray;
+    background-color: #df998d;
+    color: white;
+    padding: 0.4rem .6rem;
+    border-radius: 5px;
+    width: 300px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-login > a:hover{
+    background-color: white;
+    color: #df998d;
+    border: 1px solid #df998d;
 }
