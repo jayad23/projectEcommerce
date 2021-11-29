@@ -53,7 +53,7 @@ const Login = () => {
                             <form 
                                 onSubmit={ (e)=> handleLoginGmail(e) } 
                                 className="container-gmail">
-                                <button type='submit'>Ingresa  con <i className="fab fa-google mx-2"></i></button>
+                                <button type='submit'>Ingresa  con <i className="fab fa-google"></i></button>
                             </form>
                             <Link to="/register">¿Aun no tienes cuenta?</Link>
                         </>

@@ -98,22 +98,17 @@
     justify-content: space-evenly;
     font-style: 1rem;
 }
-.container-gmail > button:hover{
-    background-color: #fff;
-    color: #409194;
-    border: 1px solid #409194;
-}
+
 
 .container-gmail > button > i{
     color: #fff;
     font-weight: bolder;
     font-size: larger;
     padding-top: 3px;
+    margin-left: -120px;
 
 }
-.container-gmail > button > i:hover{
-    color: #409194;
-}
+
 
 .container-gmail > button > .fa-sign-out-alt{
     color: #DB4437;
