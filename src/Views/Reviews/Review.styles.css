@@ -1,10 +1,12 @@
 .reviews-container{
     margin-top: 4rem;
+    
 }
 
 .reviews-user-container{
     width: 100%;
     padding: 2rem 6rem;
+
 }
 
 .reviews-user-container > .reviews-users-img{
@@ -26,9 +28,16 @@
 
 .users-information, h1, h4, h6{
     padding: 1rem;
+    color: #409194;
 }
 
 .reviews-user-container > .reviews-stars{
     margin-top: 1rem;
     color: rgb(245, 245, 0);
+}
+
+.users-reviews>p{
+    width: 40%;
+    color:  grey;
+    font-family: 'Roboto Condensed', sans-serif;
 }
