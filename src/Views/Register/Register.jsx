@@ -30,6 +30,7 @@ const Register = () => {
 
     return (
         <div className="container-register">
+            <h2>Crear Cuenta !</h2>
             <form 
                 onSubmit={(e)=> handlerRegister(e)}
                 className="sign-up">

@@ -81,7 +81,7 @@ const reducer = ( state, action )=>{
             }
             
         case "LOG_IN_GMAIL":
-
+            
             return{
                 ...state,
                 loggedUser: action.payload
