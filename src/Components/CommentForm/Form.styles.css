@@ -59,3 +59,11 @@
     margin-right: 2rem;
     font-size: 1.7rem;
 }
+
+@media screen and (max-width: 700px) {
+    
+
+    .comments-container{
+        width: 90%;
+    }
+}

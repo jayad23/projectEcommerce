@@ -3,7 +3,10 @@ import '../../Views/Reviews/Review.styles.css'
 
 const Review = ({ userName, prof, date, rev, avatar}) => {
     return (
+
+        
         <div className="reviews-user-container">
+           
             <div className="reviews-users-img">
                 {
                     avatar ? <img src={avatar} alt="picture" /> : null

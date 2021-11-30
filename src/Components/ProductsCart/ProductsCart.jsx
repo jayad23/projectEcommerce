@@ -31,10 +31,11 @@ const ProductsCart = ( ) => {
                             <h2 className="product-name">{x.name}</h2>
                             <h2>{`$ ${x.price} USD`}</h2>
                             <h2>{ `Cantidad: ${x.amount}` }</h2>
-                           
-                            <button onClick={()=> dispatch ({type:"REMOVE_ONE", payload:  x })}><i className="fas fa-minus rotate"></i></button>
-                            <button onClick={()=> dispatch ({type:"ADD_TO_CART", payload: x })}><i className="fas fa-plus rotate"></i></button>
-                            <button onClick={()=> dispatch({type:"REMOVE_FROM_CART", payload: x  })} className=" bg-red-700 text-white py-1 px-2 rounded-xl">{x !== false && "Quitar"}</button>
+                            <div className="container-btn">    
+                                <button onClick={()=> dispatch ({type:"REMOVE_ONE", payload:  x })}><i className="fas fa-minus rotate"></i></button>
+                                <button onClick={()=> dispatch ({type:"ADD_TO_CART", payload: x })}><i className="fas fa-plus rotate"></i></button>
+                            </div>
+                                <button onClick={()=> dispatch({type:"REMOVE_FROM_CART", payload: x  })} className=" bg-red-700 text-white py-1 px-2 rounded-xl">{x !== false && <i class="fas fa-trash-alt"></i>}</button>
                         </div>
 
                     )

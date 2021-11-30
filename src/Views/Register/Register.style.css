@@ -53,3 +53,15 @@
     color: #409194;
     border: 1px solid #409194;
 }
+
+@media screen and (max-width: 650px) {  
+
+    .container-register>h2{
+        width: 90%;
+    }
+
+    .container-register{
+        width: 80%;
+    }
+    
+}

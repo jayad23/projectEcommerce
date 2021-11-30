@@ -1,8 +1,7 @@
 .fondo{
     width: 100%;
-   
     background-color: black;
-   padding-top: 50px;
+    padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -96,4 +95,53 @@
         0deg) translate3d(5px, 0, 0) rotate(
         0deg)
     }
+}
+
+@media screen and (max-width: 800px) {
+
+    .tarjeta{
+        width: 22%;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .tarjeta{
+        width: 30%;
+    }
+
+    .tarjeta>img{
+        width: 60%;
+        height: 55%;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .tarjeta{
+        width: 40%;
+    }
+    
+    .tarjeta>img{
+        width: 60%;
+        height: 55%;
+    }
+    
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .tarjeta{
+        width: 60%;
+    }
+
+    .tarjeta>img{
+        width: 60%;
+        height: 55%;
+    }
+    
 }

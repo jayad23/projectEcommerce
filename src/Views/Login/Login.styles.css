@@ -134,10 +134,52 @@
     border: 1px solid #df998d;
 }
 
-@media screen and (max-width: 685px) {
+@media screen and (max-width: 650px){
+
+    .container-log{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .img-container{
+        width: 100%;
+    }
+
+    .contenedor-login{
+        width: 100%;
+        padding-bottom: 50px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .img-container>img{
+        border-radius: 5px 5px 0 0;
+    }
+
+}
+
+
+
+@media screen and (max-width: 870px) {
 
     .contenedor-login{
         margin-top: 0px;
     }
 
+    .log-in > input{
+        width: 250px;
+    }
+    .log-in>button{
+        width: 250px;
+    }
+    .container-gmail > button{
+        width: 250px;
+    }
+    .container-gmail > button > i{
+        margin-left: 0;
+    }
+    .contenedor-login > a{
+        width: 250px;
+    }
 }

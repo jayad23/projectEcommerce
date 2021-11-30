@@ -9,6 +9,7 @@ const Review = () => {
     const {newComment} = state
     return (
         <div className='reviews-container'>
+            <h2>Comentarios</h2>
             {
                 state?.ReviewData?.map(user =>
                     <Reviews
