@@ -22,6 +22,7 @@ const Register = () => {
                 
             } catch (error) {
                 console.log(error)
+                alert(error)
             }
         } else {
             alert('Passwords dont Match')

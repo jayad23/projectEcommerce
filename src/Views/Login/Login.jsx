@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { firebase, googleProvider} from '../..//Firebase/Firebase.config'
 import "./Login.styles.css"
@@ -8,19 +8,34 @@ import imgLogin from "../../Assets/imgLogin.jpg"
 
 const Login = () => {
 
+    const [ emailAndPass, setEmailAndPass ] = useState({email:'', password:''})
     const { state, dispatch } = useContext(ProductsContext)
 
     const handleLoginGmail = async (e)=> {
         e.preventDefault()
         try {
             const { user } = await firebase.auth().signInWithPopup(googleProvider)
-            console.log(user)
             const { displayName, photoURL, uid} = user
             const infoLogIn = { displayName, photoURL, uid }
             dispatch({type:'LOG_IN_GMAIL', payload: infoLogIn})
 
         } catch (error) {
             console.log(error)
+            alert(error)
+        }
+    }
+
+    const handleLoginEmail = async (e)=>{
+        e.preventDefault()
+        const { email, password } = emailAndPass
+        try {
+            const { user } = await firebase.auth().signInWithEmailAndPassword( email, password)
+            await user.updateProfile({photoURL: imgLogin})
+            dispatch({type: 'LOG_IN_EMAIL', payload: user })
+            alert(`Bienvenido ${user.displayName}. Ya te encuentras registrado`)
+
+        } catch (error) {
+            alert(error)
         }
     }
 
@@ -45,10 +60,16 @@ const Login = () => {
                             <h1>Bienvenido {state.loggedUser.displayName}</h1>
                         :
                         <>
-                            <form className="log-in">
-                                <input type="email" placeholder='E-Mail'/>
-                                <input type="password" placeholder='Password'/>
-                                <button>Ingresar</button> 
+                            <form 
+                                onSubmit={(e)=> handleLoginEmail (e)}
+                                className="log-in">
+                                <input 
+                                    onChange={(e) => setEmailAndPass({...emailAndPass, email: e.target.value})}
+                                    type="email" placeholder='E-Mail'/>
+                                <input 
+                                    onChange={(e)=> setEmailAndPass({...emailAndPass, password: e.target.value})}
+                                    type="password" placeholder='Password'/>
+                                <button type="submit">Ingresar</button> 
                             </form>
                             <form 
                                 onSubmit={ (e)=> handleLoginGmail(e) } 
