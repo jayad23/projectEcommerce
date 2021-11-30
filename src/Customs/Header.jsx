@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import BlackLogoTrimmed from "../Assets/BalckLogoTrimmed.png"
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import ProductsContext from '../Context/ProductsContext'
 
@@ -16,10 +16,8 @@ const Header = () => {
 
     //States
     const [icon, setIcon] = useState(false)
-    const [items, setItems] = useState(1)
 
-    //imported hooks
-    const { pathname } = useLocation()
+    //imported hook
     const navigate = useNavigate()
 
     //functions of this component
@@ -34,11 +32,11 @@ const Header = () => {
     return (
         <div className="contenedor-header">
             <div className="header-container">
-                <button onClick={handlerIcon}><i class={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
+                <button onClick={handlerIcon}><i className={!icon ? "fas fa-align-justify" : "fab fa-diaspora"}></i></button>
                 <img src={BlackLogoTrimmed} alt="logo" />
                 <div className="cart-icon" onClick={()=> navigate ("/cart")}>
                     
-                    <i class="fas fa-cart-arrow-down"></i>
+                    <i className="fas fa-cart-arrow-down"></i>
                     <h6>{state.cart.length > 0 ? state?.cart?.map( a => a.amount).reduce( (a,b)=> a+b) : 0}</h6> 
                     
                 </div>

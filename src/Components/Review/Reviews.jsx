@@ -9,7 +9,7 @@ const Review = ({ userName, prof, date, rev, avatar}) => {
            
             <div className="reviews-users-img">
                 {
-                    avatar ? <img src={avatar} alt="picture" /> : null
+                    avatar ? <img src={avatar} alt="avatar" /> : null
                 }
                 <div className="users-information">
                     <h1>{userName}</h1>

@@ -25,14 +25,14 @@ export default function Payment() {
           });
         },
         onApprove: async (data, actions) => {
-          const order = await actions.order.capture();
+           await actions.order.capture();
         },
         onError: (err) => {
           console.log(err);
         },
       })
       .render(paypal.current);
-  }, []);
+  }, [priceTotal]);
   
   return (
     <div>
