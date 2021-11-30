@@ -86,7 +86,7 @@ const reducer = ( state, action )=>{
                 ...state,
                 loggedUser: action.payload
             } 
-            
+
         case "LOG_IN_EMAIL":
         
             return{
@@ -95,6 +95,12 @@ const reducer = ( state, action )=>{
             } 
 
         case "REGISTER":
+    
+            return{
+                ...state,
+                loggedUser: action.payload
+            } 
+        case "LOG_OUT":
     
             return{
                 ...state,

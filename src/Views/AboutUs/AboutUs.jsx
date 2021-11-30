@@ -11,11 +11,14 @@ const AboutUs = () => {
 
               <div className="container-info">
                 <h2>Sobre nosotros</h2>
-                <p>Bienvenidos a L A U R A  A R A N G O, cosmetóloga y esteticista.
-                Somos un consultorio cuya misión principal es ayudarte a encontrar paz, y tranquilidad a pesar del estrés del día a día. 
-                Utilizamos técnicas revolucionarias, con aparatos de última tecnología que te llevaran a la imagen que deseas de ti mismo… tanto interna, como externa.
-                Nuestros servicios tienen un amplio rango. Podemos ayudarte sea cual sea tu profesión, o cuán agudo sea el problema que quieras solucionar. 
-                entendemos que deseas una vida plena; poder trabajar y disfrutar el resultado de tu trabajo con las personas que amas, garantizando, una vez empieces tu tratamiento con nosotros, una vida llena de momentos de calidad.</p>
+                <p>LAURA ARANGO consmetologa y esteticista.<br/> 
+                    Nuestra Misión es brindar servicios de salud, bienestar y belleza integral de calidad con atención personalizada, 
+                    que superen las expectativas de nuestros clientes. Aspiramos ser una empresa con un crecimiento sostenido, innovadora y dedicada 
+                    a servir y ayudar a nuestros clientes a verse y sentirse bien, teniendo en cuenta que no es solo cómo nos vemos si no el aporte a 
+                    la parte emocional y el acompañamiento en rutinas de Skin Care en casa educando a cada uno de nuestros usuarios en el cuidado de la piel. 
+                    En la prestación del servicio ofrecemos equipos de última tecnología y productos de alta calidad, estando conformada por profesionales en 
+                    el campo de la Alta estética con un trabajo comprometido y sólido. <br/> <br/> 
+                    VISIÓN: Ser reconocidos como una marca de salud y belleza líder en el mercado local, identificados por nuestro profesionalismo, calidad humana y excelente servicio al cliente, lo que nos permita ser la mejor opción en el mercado..</p>
               </div>
             
               <div className="container-map">

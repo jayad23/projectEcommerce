@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app'
 import "firebase/compat/firestore"
 import 'firebase/compat/auth'
+import { getAuth, signOut } from 'firebase/auth'
 
 const firebaseConfig = {
   apiKey: "AIzaSyAlKiz7UT3X1fF-gTgdJQlD12iDFN3Lbas",
@@ -15,5 +16,11 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
 const googleProvider = new firebase.auth.GoogleAuthProvider()
+const auth = getAuth()
+const logOut = ()=>{
+  return signOut(auth)
+}
+export { db, googleProvider, firebase, logOut }
 
-export { db, googleProvider, firebase }
+
+
