@@ -17,7 +17,7 @@ const ProductsCart = ( ) => {
     }, [ state ])
     const textString = text.toString()
     const order = `${textString}, Total:$ ${state.priceTotal}`;
-    const message = `https://api.whatsapp.com/send?phone=573016368707&text=${order}`
+    const message = `https://api.whatsapp.com/send?phone=573205555026&text=${order}`
 
     return (
         
