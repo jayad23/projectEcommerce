@@ -82,19 +82,19 @@ const Login = () => {
                             </form>
                             <Link to="/register">¿Aun no tienes cuenta?</Link>
                         </>
-                    }
-                    {
-                        state.loggedUser ?
-                        <form 
-                            onSubmit={ (e)=>handleLogOut(e)} 
-                            className="container-gmail">
-                            <button type='submit'>S A L I R <i className="fas fa-sign-out-alt"></i></button>
-                        </form>
-                        :
-                        null
-                    }
-                </div>
+                }
+                {
+                    state.loggedUser ?
+                    <form 
+                        onSubmit={ (e)=>handleLogOut(e)} 
+                        className="container-gmail">
+                         <button type='submit'>S A L I R <i className="fas fa-sign-out-alt"></i></button>
+                    </form>
+                    :
+                    null
+                }
             </div>
+         </div>
        
     )
 }
