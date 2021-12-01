@@ -53,16 +53,15 @@ const Login = () => {
 
     return (
         
-            <div className="container-log">
+        <div className="container-log">
 
-                <div className="img-container">
-                    <img src={imgLogin} alt="" />
-                </div>
-
-                <div className="contenedor-login">
-                    {
-                        state.loggedUser ? 
-                            <h1>Bienvenido {state.loggedUser.displayName}</h1>
+            <div className="img-container">
+                <img src={imgLogin} alt="" />
+            </div>
+            <div className="contenedor-login">
+                {
+                    state.loggedUser ? 
+                        <h1>Bienvenido {state.loggedUser.displayName}</h1>
                         :
                         <>
                             <form 
